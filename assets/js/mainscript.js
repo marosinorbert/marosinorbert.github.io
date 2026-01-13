@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // -----------------------------------------------------
     // Smooth scroll logika belső horgony linkekhez
-    const scrollOffset = 200; // Pixelek száma, amennyivel feljebb áll meg a célpozícióhoz képest
+    const scrollOffset = 30; // Pixelek száma, amennyivel feljebb áll meg a célpozícióhoz képest
 
     // Segédfüggvény a görgetéshez, opcionális smooth viselkedéssel
     function performScrollTo(targetElement, offset, behavior = "smooth") {
