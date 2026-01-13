@@ -1,0 +1,44 @@
+/* Container padding, ha eltér az alapértelmezettől */
+.container {
+    padding: 0 20px;
+    /* Megtartva az eredeti main.css értékét */
+}
+
+/* Szolgáltatás kategóriák elrendezése a főoldalon */
+.services-grid {
+    display: grid;
+    /* Ezzel a beállítással dinamikusan fognak elrendeződni:
+       legalább 300px szélesek lesznek, és annyi fér el egy sorba, amennyi kifér. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Oldalspecifikus reszponzív felülírások (nem a headerre vonatkozóak) */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        /* 768px alatt egy oszlopba rendeződnek */
+    }
+
+    /* Ha itt volt még más egyedi, 768px alatti szabály, az maradhat */
+}
+
+/* Add this to your CSS file or a <style> block in your HTML */
+.centered-content {
+    display:flex; /* Enables Flexbox for this container */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally within the flex container */
+    justify-content: center; /* Centers items vertically if the container has a defined height (optional here, but good practice) */
+    width: 150%; /* Ensures the container takes full width to allow centering */
+    margin-top: 20px; /* Adds some space above, adjust as needed */
+}
+
+/* Optional: If you want the image and the list to appear side-by-side on larger screens
+   and then stack on smaller screens, you can adjust the flex-direction: */
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .centered-content {
+        flex-direction: row; /* Arranges items horizontally */
+        gap: 40px; /* Adds space between the list and the image */
+    }
+}

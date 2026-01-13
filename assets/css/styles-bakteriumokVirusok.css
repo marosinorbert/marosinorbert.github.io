@@ -1,0 +1,141 @@
+/* styles-bakteriumokVirusok.css */
+
+/* Ide kerülnek azok a stílusok, amelyek CSAK a baktériumok és vírusok oldalra vonatkoznak */
+
+.container {
+  padding: 0 10px;
+}
+
+.content-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hero .hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.features-grid-bakteriumok {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.feature-card-bakteriumok-with-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card-bakteriumok {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  flex: 1 1 400px;
+  min-height: 250px;
+  justify-content: flex-start;
+}
+
+.feature-card-bakteriumok:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.feature-card-bakteriumok h3 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.feature-card-bakteriumok p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-content-column {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reversed-layout {
+  flex-direction: row-reverse;
+}
+
+.call-to-action-small {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  margin: 3rem auto 1rem auto;
+  max-width: 700px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.call-to-action-small a {
+  color: #f8312f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.call-to-action-small a:hover {
+  color: #f8312f;
+}
+
+@media (max-width: 768px) {
+  .features-grid-bakteriumok {
+    gap: 2rem;
+  }
+
+  .feature-card-bakteriumok-with-image {
+    flex-direction: column;
+  }
+
+  .feature-card-bakteriumok,
+  .image-content-column {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .feature-card-bakteriumok h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card-bakteriumok p {
+    font-size: 1rem;
+  }
+
+  .reversed-layout {
+    flex-direction: column;
+  }
+}

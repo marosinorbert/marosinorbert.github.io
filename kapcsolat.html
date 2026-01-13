@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kapcsolat - Ecozone Technologies</title>
+  <link rel="icon" type="image/png" href="assets/images/main/favicon.png">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/styles-kapcsolat.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="Ecozone Technologies Logo"
+            onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo'" />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Főoldal</a></li>
+            <li class="dropdown">
+              <a href="index.html#services">Szolgáltatások ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li class="dropdown">
+        <a href="index.html#services">Szolgáltatások ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section id="contact-info" class="content-section">
+      <div class="container">
+        <h1 class="section-title">Lépjen velünk kapcsolatba</h1>
+
+        <div class="contact-details-grid">
+          <div class="contact-card contact-info-card">
+            <h2>Elérhetőségek</h2>
+            <p><strong>Jánosi Jenő</strong></p>
+            <p><strong>Telefonszám:</strong> <a href="tel:+40740591717">(+40) 740-591-717</a></p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:ecozone.technologies@gmail.com">ecozone.technologies@gmail.com</a>
+            </p>
+            <p><strong>Iroda címe:</strong> 535600, Székelyudvarhely, Virágok Sétánya 4/17</p>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2 class="section-title contact-form-title">Küldjön üzenetet!</h2>
+            <form action="https://formspree.io/f/xqabgaqy" method="POST" class="contact-form">
+              <div class="form-group">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="Név" placeholder="Vezetéknév Keresztnév" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefonszám:</label>
+                <input type="tel" id="phone" name="Telefonszám" placeholder="0712345678" pattern="[0-9]{1,10}"
+                  title="Kérjük, csak számokat (0-9) adjon meg, maximum 10 számjegyet." maxlength="10"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email cím:</label>
+                <input type="email" id="email" name="_replyto" placeholder="pelda@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="Üzenet" rows="6" placeholder="Szia! Azért írok, mert ..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="submit-button">Üzenet elküldése</button>
+            </form>
+          </div>
+
+          <div class="contact-card social-media-card">
+            <h2>Kövessen minket!</h2>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/profile.php?id=100095340646190&locale=hu_HU" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/images/kapcsolat/f.jpg" alt="Facebook"
+                  onerror="this.onerror=null;this.src='https://placehold.co/60x60/3b5998/ffffff?text=F';" />
+              </a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/kapcsolat/y.jpg" alt="YouTube"
+                  onerror="this.onerror=null;this.src='https://placehold.co/60x60/ff0000/ffffff?text=Y';" />
+              </a>
+              <a href="https://www.tiktok.com/@dr.eco22" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/kapcsolat/t.jpg" alt="Twitter"
+                  onerror="this.onerror=null;this.src='https://placehold.co/60x60/1da1f2/ffffff?text=T';" />
+              </a>
+            </div>
+            <p class="social-text">Kövesse munkánkat a közösségi médiában!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <h3>Ecozone Technologies</h3>
+        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
+            style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
+            mrsnrbrt</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/mainscript.js"></script>
+</body>
+
+</html>

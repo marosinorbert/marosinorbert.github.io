@@ -1,0 +1,323 @@
+/* styles-auto.css */
+
+/*
+   Ide kerülnek azok a stílusok, amelyek CSAK az autóklíma oldalra vonatkoznak,
+   és eltérnek a common.css-ben definiáltaktól.
+*/
+
+.container {
+    padding: 0 10px;
+    /* Alapértelmezett, oldalspecifikusan felülírható */
+}
+
+/* Általános szakasz stílusok */
+.content-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    text-align: justify;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Biztosítja, hogy blokk szintű elem legyen */
+    margin: 2rem auto;
+    /* Középre igazítás és tér a kép körül */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Kártyák és rács elrendezés az autó oldalhoz */
+.features-grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 300px minimum szélesség */
+    gap: 2rem;
+    /* Távolság a kártyák között */
+    max-width: 1200px;
+    margin: 2rem auto;
+    /* Középre igazítás */
+    padding: 0 10px;
+    /* Belső padding */
+    justify-content: center;
+    /* Hozzáadva a tartalom középre igazításához */
+}
+
+.features-grid-autos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 2rem;
+    /* Távolság a kártyák között */
+    max-width: 750px;
+    /* Adjusted max-width for better wrapping */
+    margin: 2rem auto;
+    /* Középre igazítás */
+    padding: 0 10px;
+    /* Belső padding */
+    justify-content: center;
+    /* Középre igazítja a tartalmat */
+}
+
+.feature-card-auto {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tartalom középre igazítása */
+    text-align: center;
+    /* Szöveg középre igazítása */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-height: 250px;
+    /* Alapértelmezett minimális magasság */
+    justify-content: flex-start;
+    /* Tartalom felülről indul */
+    flex: 1 1 400px;
+    /* Allow cards to grow/shrink, with a base of 400px */
+}
+
+.feature-card-auto:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.feature-card-auto h3 {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    /* Zöld cím */
+    margin-bottom: 1.5rem;
+    /* Nagyobb tér a cím alatt */
+    text-align: center;
+    width: 100%;
+    /* Biztosítja a teljes szélességet */
+}
+
+.feature-card-auto .styled-list,
+.feature-card-auto .checklist-list {
+    list-style: none;
+    /* Alap listajel eltávolítása */
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    /* Teljes szélesség a kártyán belül */
+    text-align: left;
+    /* Lista elemek szöveg igazítása balra */
+}
+
+.feature-card-auto .styled-list li,
+.feature-card-auto .checklist-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    /* Hely a custom listajelnek */
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.feature-card-auto .styled-list li::before {
+    content: '•';
+    /* Egyedi listajel */
+    color: #4CAF50;
+    /* Zöld szín */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+}
+
+.feature-card-auto .checklist-list li span {
+    color: #4CAF50;
+    /* Zöld pipa */
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+    /* Tér a pipa és a szöveg között */
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.full-width-card {
+    grid-column: 1 / -1;
+    /* Teljes szélességű kártya a rácsban */
+    max-width: 900px;
+    /* Példa: max szélesség, hogy ne legyen túl széles */
+    justify-self: center;
+    /* Középre igazítja a kártyát a rácsban */
+    text-align: left;
+    /* Szöveg igazítása balra a full-width kártyán belül */
+    flex: 1 1 100%;
+    /* Ensure full-width card takes full width */
+}
+
+.call-to-action-small {
+  /* Glassmorphism hatás */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  
+  /* Elrendezés és térköz */
+  padding: 2.5rem;
+  margin: 3rem auto 1rem auto;
+  max-width: 700px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.call-to-action-small a {
+    color: #f8312f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.call-to-action-small a:hover {
+    color: #f8312f;
+}
+
+/* Kép slider stílusok - kept as is, assuming separate functionality */
+.image-slider-container {
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    position: absolute; /* Fontos, hogy egymás fölött legyenek */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Alapértelmezetten láthatatlanok */
+    transition: opacity 1s ease-in-out; /* EZ A KULCS: 1 másodperces áttűnés */
+    object-fit: cover; /* A képek kitöltik a rendelkezésre álló területet */
+    /* Z-index a rétegezéshez, ha szükséges, de az opacity a fő */
+    z-index: 1; /* Alapértelmezett réteg */
+}
+
+.slider-image.active {
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+}
+
+/* Szöveg és kép egymás mellett */
+/* The 'process-section' class is added to features-grid-autos for this specific layout */
+.process-section {
+    align-items: flex-start;
+    /* Fent kezdi az elemeket */
+}
+
+.text-content-column {
+    flex: 1;
+    /* Allows text to take available space */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    text-align: center;
+}
+
+.image-content-column {
+    flex: 1;
+    /* Allows image to take available space */
+    min-width: 250px;
+    /* Minimum width before wrapping */
+    display: flex;
+    justify-content: center;
+    /* Kép középre igazítása oszlopban */
+    align-items: center;
+}
+
+.process-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.margin-top-large {
+    margin-top: 3rem;
+    /* Extra tér a címek között */
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Kártyák egy oszlopba mobil nézeten */
+    .features-grid-auto {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid-autos {
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+        align-items: center;
+        /* Center items when stacked */
+        max-width: 100%;
+        /* Use full width on mobile */
+    }
+
+    .feature-card-auto {
+        min-height: unset;
+        /* Töröljük a min-height-et mobil nézeten */
+        flex: 1 1 100%;
+        /* Cards take full width on mobile */
+        max-width: 100%;
+        /* Ensure card does not exceed screen width */
+    }
+
+    .feature-card-auto h3 {
+        font-size: 1.5rem;
+    }
+
+    .styled-list li,
+    .checklist-list li,
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .text-content-column,
+    .image-content-column {
+        flex: 1 1 100%;
+        /* Force columns to take full width and stack */
+        min-width: unset;
+        /* Visszaállítja a minimális szélességet */
+        width: 100%;
+        /* Teljes szélesség mobil nézeten */
+    }
+}

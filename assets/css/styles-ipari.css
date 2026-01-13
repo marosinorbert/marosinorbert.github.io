@@ -1,0 +1,47 @@
+.container {
+    padding: 0 10px;
+    /* Megtartva a lakossagi.css értékét, de módosítható */
+}
+
+/* Ha az ipari oldalon van services-grid, és eltérően viselkedik */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* KÉPEK KÖZÉPRE IGAZÍTÁSA A KÁRTYÁKBAN */
+.feature-card img {
+    max-width: 100%;
+    /* A kép nem lehet szélesebb, mint a szülő eleme */
+    height: auto;
+    /* A magasság automatikusan igazodik a szélességhez, megőrizve az arányokat */
+    display: block;
+    /* Eltávolítja az extra alatta lévő teret, ha inline elem */
+    margin: 0 auto 1rem auto;
+    /* FONTOS: felül/alul 0/1rem, bal/jobb auto a középre igazításhoz */
+    object-fit: contain;
+    /* Biztosítja, hogy a kép teljesen látható legyen a keretben */
+    max-height: 100%;
+    /* Példa magassági korlát, szükség esetén módosítható */
+    width: auto;
+    /* A szélesség automatikusan igazodik a max-height-hez, de a max-width a prioritás */
+}
+
+
+/* Megakadályozza a linkek aláhúzását a kártyákon, és visszaállítja a színeket */
+.feature-card a {
+  text-decoration: none;
+  color: #333; /* Az alap szöveg színe */
+}
+
+/* Oldalspecifikus reszponzív felülírások */
+@media (max-width: 600px) {
+
+    /* Példa: Ha az ipari oldalon a features-grid eltérő viselkedést mutat 600px alatt */
+    .features-grid {
+        grid-template-columns: 1fr;
+        /* Egy oszlopba rendeződik */
+    }
+}

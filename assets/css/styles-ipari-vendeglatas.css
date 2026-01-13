@@ -1,0 +1,126 @@
+/* styles-ipari-vendeglatas.css */
+
+/* Ide kerülnek azok a stílusok, amelyek CSAK a Vendéglátás oldalra vonatkoznak */
+
+.container {
+  padding: 0 10px;
+}
+
+.content-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Főcím stílusa, a háttérrel kontrasztos fehér szín */
+.hero .hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  /* Fehér cím */
+  margin-bottom: 1rem;
+}
+
+/* A kártyák és a képek közötti elrendezés */
+.features-grid-vendeglatas {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.feature-card-vendeglatas-with-image {
+  display: flex;
+  flex-wrap: wrap;
+  /* Hozza létre a sortörést mobil nézetben */
+  gap: 2rem;
+  align-items: center;
+  /* Függőlegesen középre igazítja a tartalmat */
+  justify-content: center;
+}
+
+.feature-card-vendeglatas {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  flex: 1 1 400px;
+  /* Alapértelmezett kártya szélesség */
+  min-height: 250px;
+  justify-content: flex-start;
+}
+
+.feature-card-vendeglatas:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Kártyák címének színe változatlan marad */
+.feature-card-vendeglatas h3 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.feature-card-vendeglatas p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-content-column {
+  flex: 1 1 400px;
+  /* Alapértelmezett kép szélesség */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* A kártya és a kép sorrendjének megfordítása */
+.reversed-layout {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .features-grid-vendeglatas {
+    gap: 2rem;
+  }
+
+  .feature-card-vendeglatas-with-image {
+    flex-direction: column;
+  }
+
+  .feature-card-vendeglatas,
+  .image-content-column {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .feature-card-vendeglatas h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card-vendeglatas p {
+    font-size: 1rem;
+  }
+
+  .reversed-layout {
+    flex-direction: column;
+  }
+}

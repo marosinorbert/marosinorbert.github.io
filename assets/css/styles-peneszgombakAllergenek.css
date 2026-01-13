@@ -1,0 +1,253 @@
+/* styles-peneszgombakAllergenek.css */
+
+/* Ide kerülnek azok a stílusok, amelyek CSAK a penészgombák és allergének oldalra vonatkoznak */
+
+.container {
+  padding: 0 10px;
+}
+
+.content-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Főcím stílusa, a háttérrel kontrasztos fehér szín */
+.hero .hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  /* Fehér cím */
+  margin-bottom: 1rem;
+}
+
+/* A kártyák és a képek közötti elrendezés */
+.features-grid-peneszgombak {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.feature-card-peneszgombak-with-image {
+  display: flex;
+  flex-wrap: wrap;
+  /* Hozza létre a sortörést mobil nézetben */
+  gap: 2rem;
+  align-items: center;
+  /* Függőlegesen középre igazítja a tartalmat */
+  justify-content: center;
+}
+
+.feature-card-peneszgombak {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  flex: 1 1 400px;
+  /* Alapértelmezett kártya szélesség */
+  min-height: 250px;
+  justify-content: flex-start;
+}
+
+.feature-card-peneszgombak:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Kártyák címének színe változatlan marad */
+.feature-card-peneszgombak h3 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.feature-card-peneszgombak p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-content-column {
+  flex: 1 1 400px;
+  /* Alapértelmezett kép szélesség */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* A kiemelt, középre igazított szöveg stílusa */
+.highlighted-text {
+  margin: 3rem auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  max-width: 800px;
+}
+
+/* A kártya és a kép sorrendjének megfordítása */
+.reversed-layout {
+  flex-direction: row-reverse;
+}
+
+/* Új stílus az Allergén kártyáknak */
+
+.section-title {
+  text-align: center;
+  margin: 0.5rem auto 1rem;
+}
+
+.section-title-allergens {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.features-grid-allergens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+
+.feature-card-allergens {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  flex: 1 1 450px;
+  /* Az `auto.html` stílusához hasonló szélesség */
+  min-height: 220px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: left;
+  /* A szöveg balra igazítása */
+}
+
+.feature-card-allergens:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.feature-card-allergens h3 {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.feature-card-allergens ul {
+  list-style: none;
+  /* Eltávolítjuk az alapértelmezett bulletet */
+  padding: 0;
+  margin: 0;
+}
+
+.feature-card-allergens li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.feature-card-allergens li::before {
+  content: '•';
+  /* Vonalkát adunk a listaelemek elé */
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.call-to-action-small {
+  /* Glassmorphism hatás */
+  background: rgba(233, 159, 10, 0.2);
+  backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+
+  /* Elrendezés és térköz */
+  padding: 2.5rem;
+  margin: 3rem auto 1rem auto;
+  max-width: 700px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.call-to-action-small a {
+  color: #f8312f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.call-to-action-small a:hover {
+  color: #f8312f;
+}
+
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+  .features-grid-peneszgombak {
+    gap: 2rem;
+  }
+
+  .feature-card-peneszgombak-with-image {
+    flex-direction: column;
+    /* Stack items vertically on mobile */
+  }
+
+  .feature-card-peneszgombak,
+  .image-content-column {
+    flex: 1 1 100%;
+    /* Kártyák és képek teljes szélességet foglalnak el */
+    min-width: unset;
+  }
+
+  .feature-card-peneszgombak h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card-peneszgombak p {
+    font-size: 1rem;
+  }
+
+  .reversed-layout {
+    flex-direction: column;
+    /* Mobile stack is always column */
+  }
+
+  /* Új stílusok mobilra */
+  .features-grid-allergens {
+    flex-direction: column;
+  }
+
+  .feature-card-allergens {
+    min-height: unset;
+  }
+}

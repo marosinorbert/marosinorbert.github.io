@@ -1,0 +1,329 @@
+/* styles-kapcsolat.css */
+
+/* Alapvető container padding, ha eltér a common.css-től */
+.container {
+    padding: 0 10px;
+}
+
+/* Kapcsolati részleg általános stílusai */
+.content-section {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #d4e8d4;
+    /* Világosabb zöld háttér */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/* Az alábbi beállítások felülírják a korábbi .contact-details-grid beállításokat */
+.contact-details-grid {
+    display: grid;
+    /* Alapértelmezett (asztali) elrendezés */
+    /* Az "Elérhetőségek" és "Kövessen minket!" kártyák egymás mellett */
+    /* Az űrlap alattuk, teljes szélességben */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Kártyák alap beállítása */
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    padding: 0 10px;
+}
+
+/* Adjunk egyértelmű osztályokat az elemeknek, hogy könnyebb legyen célozni */
+.contact-info-card {
+    /* Ez az "Elérhetőségek" kártya */
+    order: 1;
+    /* Alapértelmezetten első */
+}
+
+.contact-form-wrapper {
+    /* Ez a "Küldjön üzenetet!" űrlapot és címet tartalmazó burkoló */
+    grid-column: 1 / -1;
+    /* Asztali nézetben foglalja el a teljes szélességet */
+    order: 3;
+    /* Alapértelmezetten harmadik */
+}
+
+.social-media-card {
+    /* Ez a "Kövessen minket!" kártya */
+    order: 2;
+    /* Asztali nézetben az "Elérhetőségek" mellett jelenik meg */
+}
+
+/* Reszponzív beállítások - Csak telefonos nézetben (max-width: 768px) */
+@media (max-width: 768px) {
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+        /* Mobil nézeten egy oszlopban */
+    }
+
+    /* Sorrend megváltoztatása mobil nézetben */
+    .contact-info-card {
+        order: 1;
+        /* Elérhetőségek marad az első */
+    }
+
+    .contact-form-wrapper {
+        order: 2;
+        /* Az űrlap lesz a második */
+    }
+
+    .social-media-card {
+        order: 3;
+        /* A közösségi média kártya lesz a harmadik (az űrlap alatt) */
+    }
+
+    /* Az űrlap címének és az űrlapnak a margóit és paddingjait lehet itt finomítani
+     a .contact-form-wrapper belsejében, ha szükséges. */
+    .contact-form-title {
+        margin-top: 2rem;
+        /* Állítsa be a margót a mobilnézethez */
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Meglévő CSS szabályaid, mint pl. .contact-card, .contact-form, stb. maradnak,
+   de győződj meg róla, hogy a .contact-form-wrapper stílusai nem ütköznek velük. */
+.contact-form-wrapper .contact-form {
+    padding: 1.5rem;
+    /* Például, hogy az űrlap belseje is mobilbarát legyen */
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertikálisan középre igazítja a tartalmat */
+    align-items: center;
+    /* Horizontálisan középre igazítja a tartalmat */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    /* Biztosítja a teljes szélességet */
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.8rem;
+}
+
+.contact-card p strong {
+    color: #333;
+}
+
+.contact-card a {
+    color: #0077b6;
+    /* Kék link szín */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #00aefd;
+    /* Világosabb kék hover */
+}
+
+/* Szociális média ikonok */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    /* Hogy mobil nézeten is tördeljen */
+}
+
+.social-media-icons img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-text {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 1rem;
+}
+
+/* Kapcsolatfelvételi űrlap */
+.contact-form-title {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: #00AEEF;
+    /* Kék cím */
+}
+
+.contact-form {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    /* Űrlap elemek balra igazítása */
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    /* 100% szélesség, de paddinggal */
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    /* Csak vertikálisan átméretezhető */
+    min-height: 120px;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #4CAF50, #00AEEF);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    /* Teljes szélességű gomb */
+    width: fit-content;
+    /* Gomb szélessége a tartalomhoz igazodik */
+    margin: 1.5rem auto 0 auto;
+    /* Középre igazítás */
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+/* Üzenet visszajelzés (siker/hiba) - ezen a Formspree megoldáson nem közvetlenül használt */
+.form-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    background-color: #e6ffe6;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.form-message.error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+        /* Mobil nézeten egy oszlopban */
+    }
+
+    .contact-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-card p {
+        font-size: 1rem;
+    }
+
+    .social-media-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 0.7rem 0.8rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+}
