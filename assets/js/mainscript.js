@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // -----------------------------------------------------
-    // Scroll Restoration kezelése (megakadályozza az ugrálást újratöltéskor)
-    // Ez kulcsfontosságú: megakadályozza, hogy a böngésző emlékezzen az utolsó görgetési pozícióra.
-    // Ez biztosítja, hogy CTRL+F5-re az oldal tetején maradjon.
+    // Scroll Restoration kezelése
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
@@ -13,13 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileNav = document.getElementById('mobileNav');
 
     if (mobileMenuBtn && mobileNav) {
-        // Menü nyitása/zárása gombnyomásra
         mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
         });
 
-        // Menü bezárása, ha kint kattintanak vagy menü linkre kattintanak
         document.addEventListener('click', (event) => {
             const isClickInsideNav = mobileNav.contains(event.target);
             const isClickOnBtn = mobileMenuBtn.contains(event.target);
@@ -31,15 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // -----------------------------------------------------
-    // Smooth scroll logika belső horgony linkekhez
-    const scrollOffset = 120; // Pixelek száma, amennyivel feljebb áll meg a célpozícióhoz képest
+    // Smooth scroll logika
+    const scrollOffset = 120; // Itt hagytam a 120-as értéket
 
-    // Segédfüggvény a görgetéshez, opcionális smooth viselkedéssel
     function performScrollTo(targetElement, offset, behavior = "smooth") {
         if (!targetElement) return;
 
         let topPosition;
-        if (targetElement === document.documentElement) { // Ha a #home vagy #
+        if (targetElement === document.documentElement) {
             topPosition = 0;
         } else {
             topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -47,40 +42,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
         window.scrollTo({
             top: topPosition,
-            behavior: behavior // Lehet "smooth" vagy "auto"
+            behavior: behavior
         });
 
-        // Menü bezárása scroll után, ha nyitva volt
         if (mobileNav && mobileNav.classList.contains('active')) {
             mobileNav.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
         }
     }
 
-    // Kezeli a belső horgony linkekre kattintást (pl. #about)
+    // 1. Kattintások kezelése az aktuális oldalon
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            // Ne kezelje azokat a linkeket, amik más HTML fájlra mutatnak
-            // vagy a mobil menü gombot
             if (this.hostname !== window.location.hostname || this.pathname !== window.location.pathname) {
                 return;
             }
 
-            e.preventDefault(); // Megakadályozza az alapértelmezett, azonnali ugrást
-
+            e.preventDefault();
             const targetId = this.getAttribute('href');
             let targetElement = document.querySelector(targetId);
 
             if (targetId === '#home' || targetId === '#') {
-                targetElement = document.documentElement; // A dokumentum teteje
+                targetElement = document.documentElement;
             }
 
-            performScrollTo(targetElement, scrollOffset, "smooth"); // Itt smooth scroll
+            performScrollTo(targetElement, scrollOffset, "smooth");
         });
     });
 
+    // 2. ÚJ: Másik oldalról érkezés kezelése (pl. index.html#about)
+    if (window.location.hash) {
+        // Kis késleltetés, hogy a böngésző alapértelmezett ugrása után mi korrigálhassunk
+        setTimeout(function() {
+            const targetId = window.location.hash;
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                performScrollTo(targetElement, scrollOffset, "smooth");
+            }
+        }, 200); // 200ms biztonsági tartalék a teljes betöltődéshez
+    }
 
-    // A képváltó slider JavaScriptje (ha van ilyen a index.html-ben)
+    // -----------------------------------------------------
+    // A képváltó slider JavaScriptje
     const sliderImages = document.querySelectorAll('.slider-image');
     let currentImageIndex = 0;
 
@@ -91,9 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sliderImages[currentImageIndex].classList.add('active');
     }
 
-    // Indítsa el az automatikus váltást 3 másodpercenként, ha van slider
     if (sliderImages.length > 1) {
-        // Kezdetben állítsa be az első képet aktívnak, ha még nincs
         if (!document.querySelector('.slider-image.active')) {
             sliderImages[0].classList.add('active');
         }
