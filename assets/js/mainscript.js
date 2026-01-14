@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (targetElement) {
                 performScrollTo(targetElement, scrollOffset, "smooth");
             }
-        }, 200); // 200ms biztonsági tartalék a teljes betöltődéshez
+        }, 20); // 200ms biztonsági tartalék a teljes betöltődéshez
     }
 
     // -----------------------------------------------------
