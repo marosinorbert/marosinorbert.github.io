@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 20); // 200ms biztonsági tartalék a teljes betöltődéshez
     }
 
-    // -----------------------------------------------------
+    // -----------------------------------------------------  
     // A képváltó slider JavaScriptje
     const sliderImages = document.querySelectorAll('.slider-image');
     let currentImageIndex = 0;
@@ -101,4 +101,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         setInterval(showNextImage, 3500);
     }
-});   
+});     
