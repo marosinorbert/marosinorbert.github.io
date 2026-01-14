@@ -52,7 +52,7 @@ window.translations = {
 
     "features.title": "Miért válasszon minket?",
     "features.card1.title": "100% VEGYSZERMENTES",
-    "features.card1.desc": "Környezetbarát technológia, amely nem használ vegyszereket"
+    "features.card1.desc": "Környezetbarát technológia, amely nem használ vegyszereket",
     "features.card2.desc": "Gyorsan és hatékonyan elpusztítjuk a penészt, allergéneket, baktériumokat, vírusokat és más kórokozókat.",
     "features.card3.title": "KÖRNYEZETBARÁT",
     "features.card3.desc": "Az ózon tiszta oxigénné alakul vissza, nem hagy káros maradványokat",
