@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (mobileMenuBtn && mobileNav) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active'); 
         });
 
         document.addEventListener('click', (event) => {
