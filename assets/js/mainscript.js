@@ -80,6 +80,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // Smooth scroll on page load if URL contains a hash (pl. index.html#about)
+    setTimeout(function () {
+        if (window.location.hash && window.location.hash.length > 1) {
+            const targetId = window.location.hash;
+            let targetElement = document.querySelector(targetId);
+            const scrollOffset = 80;
+            if (targetElement) {
+                let topPosition;
+                if (targetElement === document.documentElement) {
+                    topPosition = 0;
+                } else {
+                    topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
+                }
+                window.scrollTo({
+                    top: topPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+    }, 100);
+
     // A képváltó slider JavaScriptje (ha van ilyen a index.html-ben)
     const sliderImages = document.querySelectorAll('.slider-image');
     let currentImageIndex = 0;
