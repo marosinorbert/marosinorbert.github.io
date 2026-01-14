@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html" class="active">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" class="active" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html" class="active">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" class="active" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,7 +78,7 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Ózonos autóklíma-fertőtlenítés és utastér szagtalanítás</h1>
+          <h1 data-key="auto.title">Ózonos autóklíma-fertőtlenítés és utastér szagtalanítás</h1>
           <p class="hero-subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás az egyik leghatékonyabb,
@@ -81,8 +97,8 @@
 
         <div class="features-grid-auto">
           <div class="feature-card-auto">
-            <h3>Miért fontos?</h3>
-            <ul class="styled-list">
+            <h3 data-key="auto.why.title">Miért fontos?</h3>
+            <ul class="styled-list" data-key="auto.why.list">
               <li>A klímában kicsapódó pára ideális a kórokozók megtelepedéséhez.</li>
               <li>A kellemetlen szagok, gyakori "nyári megfázás", allergiás tünetek mind erre utalhatnak.</li>
               <li>A rendszeres fertőtlenítése és pollenszűrő-csere segít megelőzni a betegségeket.</li>
@@ -90,8 +106,8 @@
           </div>
 
           <div class="feature-card-auto">
-            <h3>Miért válassza az ózont?</h3>
-            <ul class="styled-list">
+            <h3 data-key="auto.whyozon.title">Miért válassza az ózont?</h3>
+            <ul class="styled-list" data-key="auto.whyozon.list">
               <li>Hatékonyabb más eljárásoknál, és nem hagy hátra káros anyagokat.</li>
               <li>Nem károsítja az autó utasterének anyagait és berendezéseit</li>
               <li>Illatmentesen, nyom nélkül tisztít</li>
@@ -99,8 +115,8 @@
           </div>
 
           <div class="feature-card-auto">
-            <h3>Mikor javasolt?</h3>
-            <ul class="checklist-list">
+            <h3 data-key="auto.when.title">Mikor javasolt?</h3>
+            <ul class="checklist-list" data-key="auto.when.list">
               <li><span>✔</span> Kellemetlen szag a klímából vagy az utastérből</li>
               <li><span>✔</span> Visszatérő torokfájás, tüsszögés, orrdugulás, megfázásos tünetek</li>
               <li><span>✔</span> Allergiás tünetek</li>
@@ -110,8 +126,8 @@
         </div>
 
         <div class="call-to-action-small">
-          <p>📞 Hívjon bizalommal: <a href="tel:+40740591717">0740-591-717</a></p>
-          <p>Tisztítsa meg járművét belülről – gyorsan, hatékonyan, biztonságosan!</p>
+          <p data-key="phone.call">📞 Hívjon bizalommal: <a href="tel:+40740591717" data-key="phone.number">0740-591-717</a></p>
+          <p data-key="auto.cta">Tisztítsa meg járművét belülről – gyorsan, hatékonyan, biztonságosan!</p>
         </div>
 
         <img src="assets/images/auto/2.jpg" alt="Autó belső fertőtlenítés" class="content-image"
@@ -121,14 +137,14 @@
 
     <section class="content-section">
       <div class="container">
-        <h2 class="section-title">SZEMÉLY-, TEHERGÉPJÁRMŰ FLOTTA KEZELÉSE</h2>
+        <h2 class="section-title" data-key="auto.fleet.title">SZEMÉLY-, TEHERGÉPJÁRMŰ FLOTTA KEZELÉSE</h2>
         <img src="assets/images/auto/3.jpg" alt="Gépjármű flotta kezelése" class="content-image"
           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e8f5e8/333333?text=FlottaKezeles'" />
 
         <div class="features-grid-auto">
           <div class="feature-card-auto full-width-card">
-            <h3>Miért éri meg a cég gépjárműveinek higiéniai kezelése?</h3>
-            <ul class="styled-list">
+            <h3 data-key="auto.fleet.heading">Miért éri meg a cég gépjárműveinek higiéniai kezelése?</h3>
+            <ul class="styled-list" data-key="auto.fleet.list">
               <li>Kevesebb megbetegedés, kevesebb hiányzás</li>
               <li>Nagyobb munkavállalói elégedettség</li>
               <li>Megőrzött járműérték, könnyebb továbbértékesítés</li>
@@ -136,7 +152,7 @@
             </ul>
           </div>
         </div>
-        <p class="call-to-action-small">A fertőtlenített és tiszta jármű nem luxus, hanem befektetés a cég hatékony
+        <p class="call-to-action-small" data-key="auto.fleet.cta">A fertőtlenített és tiszta jármű nem luxus, hanem befektetés a cég hatékony
           működésébe</p>
 
         <div class="image-slider-container">
@@ -156,14 +172,14 @@
       <div class="container">
         <div class="features-grid-autos">
           <div class="feature-card-auto">
-            <h3 class="section-title">Az <span class="ecozone-tech"><span class="eco1">Eco</span><span
+            <h3 class="section-title" data-key="auto.section.title">Az <span class="ecozone-tech"><span class="eco1">Eco</span><span
                   class="zone1">zone</span>-<span class="tech1">tech</span></span> autoklíma fertőtlenítés,
               szagtalanítás</h3>
             <div class="text-content-column">
-              <p>A kezelés időtartama: 20-120 perc, a jármű típusától/rakterétől függően.</p>
-              <p>Az eljárás során nemcsak a szellőzőrendszert, hanem az egész utasteret és rakteret is fertőtlenítjük és
+              <p data-key="auto.section.p1">A kezelés időtartama: 20-120 perc, a jármű típusától/rakterétől függően.</p>
+              <p data-key="auto.section.p2">Az eljárás során nemcsak a szellőzőrendszert, hanem az egész utasteret és rakteret is fertőtlenítjük és
                 szagtalanítjuk.</p>
-              <p>Az ózonnal telített levegő az egész klíma- és
+              <p data-key="auto.section.p3">Az ózonnal telített levegő az egész klíma- és
                 szellőzőrendszert átjárja, elpusztítva a baktériumokat, penészt és allergéneket.</p>
 
             </div>
@@ -176,9 +192,9 @@
       </div>
       <h2 class="section-title margin-top-large"></h2>
       <div class="features-grid-autos">
-        <div class="feature-card-auto full-width-card">
-          <h3 class="section-title">Miért az ózon a leghatékonyabb autóklíma-tisztító?</h3>
-          <p class="section-description">Az ózon a leghatékonyabb autóklíma-tisztító,
+          <div class="feature-card-auto full-width-card">
+          <h3 class="section-title" data-key="auto.why_long.title">Miért az ózon a leghatékonyabb autóklíma-tisztító?</h3>
+          <p class="section-description" data-key="auto.why_long.desc">Az ózon a leghatékonyabb autóklíma-tisztító,
             mert képes elérni a legnehezebben hozzáférhető helyeket a rendszerben, ahol a baktériumok,
             penészgombák és kellemetlen szagok felhalmozódnak. Az ózon rendkívül erős oxidáló hatású,
             így gyorsan és hatékonyan lebontja a baktériumokat, vírusokat, penészgombákat és szennyeződéseket,
@@ -194,8 +210,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
@@ -203,7 +219,8 @@
     </div>
     </div>
   </footer>
-
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/mainscript.js"></script>
   <script>
     // Minimalista JavaScript a képváltáshoz a sliderben

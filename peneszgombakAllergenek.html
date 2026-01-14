@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,8 +78,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Penészgombák és Allergének</h1>
-          <p class="hero-subtitle">
+          <h1 data-key="penesz.title">Penészgombák és Allergének</h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás az egyik leghatékonyabb,
             100%-ban vegyszermentes módszer a beltéri felületek és levegő tisztítására. Elpusztítja a penészspórákat,
@@ -79,8 +95,8 @@
         <div class="features-grid-peneszgombak">
           <div class="feature-card-peneszgombak-with-image">
             <div class="feature-card-peneszgombak">
-              <h3>A penész megjelenése és szaporodása</h3>
-              <p>A penész bármely épületben, otthonban megjelenhet, nem számít, mennyire új vagy régi az épület. Ha a
+              <h3 data-key="penesz.section1.title">A penész megjelenése és szaporodása</h3>
+              <p data-key="penesz.section1.p">A penész bármely épületben, otthonban megjelenhet, nem számít, mennyire új vagy régi az épület. Ha a
                 penész megjelenik, gyorsan el is szaporodik, de az időben történő cselekvés megakadályozhatja, hogy
                 egészségügyi problémákat okozzon.</p>
             </div>
@@ -91,8 +107,8 @@
           </div>
           <div class="feature-card-peneszgombak-with-image reversed-layout">
             <div class="feature-card-peneszgombak">
-              <h3>Egészségügyi hatások</h3>
-              <p>A penészspórák a levegőbe kerülve irritálhatják a szemet, orrot és torkot, allergiás-, asztmás és egyéb
+              <h3 data-key="penesz.section2.title">Egészségügyi hatások</h3>
+              <p data-key="penesz.section2.p">A penészspórák a levegőbe kerülve irritálhatják a szemet, orrot és torkot, allergiás-, asztmás és egyéb
                 egészségkárosító hatást is kiválthatnak, a kellemetlen, dohos szagról nem is beszélve.</p>
             </div>
             <div class="image-content-column">
@@ -102,8 +118,8 @@
           </div>
           <div class="feature-card-peneszgombak-with-image">
             <div class="feature-card-peneszgombak">
-              <h3>Megoldás és megelőzés</h3>
-              <p>A penész eltávolításának kulcsa a megfelelő tisztításban rejlik, de a legjobb védekezés a megelőzés. Az
+              <h3 data-key="penesz.section3.title">Megoldás és megelőzés</h3>
+              <p data-key="penesz.section3.p">A penész eltávolításának kulcsa a megfelelő tisztításban rejlik, de a legjobb védekezés a megelőzés. Az
                 <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                     class="tech1">tech</span></span> eljárás hatékonyan pusztítja el a penészgombákat a levegőben és a
                 felületeken, megakadályozva azok elszaporodását. Biztos megoldás a penészesedés és dohos szag
@@ -115,30 +131,30 @@
             </div>
           </div>
           <div class="call-to-action-small">
-            <p>📞 Hívjon bizalommal: <a href="tel:+40740591717">0740-591-717</a></p>
-            <p>Tisztítsa meg otthonát - gyorsan, hatékonyan, biztonságosan!</p>
+            <p data-key="phone.call">📞 Hívjon bizalommal: <a href="tel:+40740591717" data-key="phone.number">0740-591-717</a></p>
+            <p data-key="penesz.cta">Tisztítsa meg otthonát - gyorsan, hatékonyan, biztonságosan!</p>
           </div>
 
           <div class="section-title">
-            <h2 class="section-title-allergens">Allergének</h2>
+            <h2 class="section-title-allergens" data-key="penesz.allergenes.title">Allergének</h2>
           </div>
           <div class="features-grid-allergens">
             <div class="feature-card-allergens">
-              <h3>Allergének az otthonodban</h3>
+              <h3 data-key="penesz.allergenes.home.title">Allergének az otthonodban</h3>
               <ul>
-                <li>A háziporatkák ürülékében lévő fehérje irritálhatja a szemet, orrot és torkot, allergiás tüneteket
+                <li data-key="penesz.allergenes.home.li1">A háziporatkák ürülékében lévő fehérje irritálhatja a szemet, orrot és torkot, allergiás tüneteket
                   (orrfolyás, tüsszögés, köhögés, bőrirritáció) és kellemetlen szagokat okozhat.</li>
-                <li>Az allergének megtalálhatók mindenhol a lakásban: ágyneműben, matracban, szőnyegekben és bútorokban.
+                <li data-key="penesz.allergenes.home.li2">Az allergének megtalálhatók mindenhol a lakásban: ágyneműben, matracban, szőnyegekben és bútorokban.
                 </li>
               </ul>
             </div>
             <div class="feature-card-allergens">
-              <h3>Megoldás: Ózonos légtisztítás</h3>
+              <h3 data-key="penesz.allergenes.solution.title">Megoldás: Ózonos légtisztítás</h3>
               <ul>
-                <li>Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
+                <li data-key="penesz.allergenes.solution.li1">Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                       class="tech1">tech</span></span> eljárás hatékonyan elpusztítja a poratkákat és semlegesíti az
                   allergiát okozó fehérje ürüléket.</li>
-                <li>A gáz halmazállapotnak köszönhetően minden rejtett felületre és zugba is bejut, ahol hatékonyan
+                <li data-key="penesz.allergenes.solution.li2">A gáz halmazállapotnak köszönhetően minden rejtett felületre és zugba is bejut, ahol hatékonyan
                   fertőtlenít és szagtalanít – még ott is, ahová a hagyományos takarítás nem ér el.</li>
               </ul>
             </div>
@@ -152,14 +168,16 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
       </div>
     </div>
   </footer>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
   <script src="assets/js/mainscript.js"></script>
 </body>

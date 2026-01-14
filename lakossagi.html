@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services" class="active">Szolgáltatások ▾</a>
+              <a href="index.html#services" class="active" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html" class="active">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" class="active" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -45,17 +55,23 @@
   <!-- Mobile Navigation -->
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="#home">Főoldal</a></li>
+      <li><a href="#home" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services" class="active">Szolgáltatások ▾</a>
+        <a href="index.html#services" class="active" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html" class="active">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" class="active" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about" class="active">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" class="active" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -63,8 +79,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1> Lakossági szolgáltatások </h1>
-          <p class="hero-subtitle">
+          <h1 data-key="services.residential"> Lakossági szolgáltatások </h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás vegyszermentesen fertőtlenít, szagtalanít, és elpusztítja a
             kórokozókat, élősködőket
@@ -81,8 +97,8 @@
             <a href="peneszgombakAllergenek.html">
               <img src="assets/images/lakossagi/moldAllergie.jpg" alt="Penészgombák, allergének"
                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Penészgombák'" />
-              <h3>PENÉSZGOMBÁK, ALLERGÉNEK</h3>
-              <p>A penészgombák és allergének, mint a pollenek vagy tisztítószermaradványok, folyamatosan jelen vannak a
+              <h3 data-key="lakossagi.feature1.title">PENÉSZGOMBÁK, ALLERGÉNEK</h3>
+              <p data-key="lakossagi.feature1.desc">A penészgombák és allergének, mint a pollenek vagy tisztítószermaradványok, folyamatosan jelen vannak a
                 levegőben és felületeken, irritációt és egészségügyi problémákat okozva. Az <span
                   class="eco">Eco</span><span class="zone">zone</span>-<span class="tech">tech</span> eljárás hatékonyan
                 elpusztítja a gombaspórákat és semlegesíti az allergiát kiváltó részecskéket, így tiszta, egészséges
@@ -93,11 +109,10 @@
             <a href="bakteriumokVirusok.html">
               <img src="assets/images/lakossagi/virusBact.jpg" alt="Baktériumok, vírusok"
                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Baktériumok'" />
-              <h3>BAKTÉRIUMOK, VÍRUSOK</h3>
-              <p>Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
+              <h3 data-key="lakossagi.feature2.title">BAKTÉRIUMOK, VÍRUSOK</h3>
+              <p data-key="lakossagi.feature2.desc">Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                     class="tech">tech</span></span> eljárás többszörösen hatékonyabb, mint a hagyományos klóros
-                fertőtlenítés:
-                elpusztítja a baktériumokat és vírusokat, amelyek nem képesek ellenállást kialakítani vele szemben.
+                fertőtlenítés: elpusztítja a baktériumokat és vírusokat, amelyek nem képesek ellenállást kialakítani vele szemben.
                 Az ózon szabadgyökös hatásmechanizmusa roncsolja a kórokozókat, így azok elveszítik fertőzőképességüket.
               </p>
             </a>
@@ -106,8 +121,8 @@
             <a href="rosszSzagok.html">
               <img src="assets/images/lakossagi/badSmell.jpg" alt="Rossz szagok"
                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Rossz+szagok'" />
-              <h3>ROSSZ SZAGOK</h3>
-              <p>Az illatosítók csak ideiglenesen elfedik a kellemetlen szagokat, de azok hamarosan visszatérnek.
+              <h3 data-key="lakossagi.feature3.title">ROSSZ SZAGOK</h3>
+              <p data-key="lakossagi.feature3.desc">Az illatosítók csak ideiglenesen elfedik a kellemetlen szagokat, de azok hamarosan visszatérnek.
                 Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                     class="tech">tech</span></span> eljárás viszont nem elrejti őket, hanem valóban eltünteti,
                 így tartósan megszabadulhatsz a zavaró szagoktól. Mindezt vegyszerek nélkül,
@@ -118,8 +133,8 @@
             <a href="eloskodok.html">
             <img src="assets/images/lakossagi/pestControl.jpg" alt="Élősködők"
               onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Élősködők'" />
-            <h3>ÉLŐSKÖDŐK</h3>
-            <p>A 100%-ban vegyszermentes <span class="eco">Eco</span><span class="zone">zone</span>-<span
+            <h3 data-key="lakossagi.feature4.title">ÉLŐSKÖDŐK</h3>
+            <p data-key="lakossagi.feature4.desc">A 100%-ban vegyszermentes <span class="eco">Eco</span><span class="zone">zone</span>-<span
                 class="tech">tech</span> eljárás a levegőben szétterjedve a legeldugottabb helyekre is eljut,
               ahol hatékonyan elpusztítja az ott megbúvó élősködőket
               – például a poloskákat és atkákat –, legyenek azok bútorokban,
@@ -134,8 +149,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
@@ -143,8 +158,9 @@
     </div>
     </div>
   </footer>
-
-  <script src=\"assets/js/mainscript.js\"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/mainscript.js"></script>
 </body>
 
 </html>

@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services" class="active">Szolgáltatások ▾</a>
+              <a href="index.html#services" class="active" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html" class="active">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" class="active" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services" class="active">Szolgáltatások ▾</a>
+        <a href="index.html#services" class="active" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html" class="active">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" class="active" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,8 +78,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Ipari szolgáltatások</h1>
-          <p class="hero-subtitle">
+          <h1 data-key="services.industrial">Ipari szolgáltatások</h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> fertőtlenítési megoldások ipari és intézményi környezetben.
           </p>
@@ -78,8 +94,8 @@
             <a href="ipari-vendeglatas.html">
             <img src="assets/images/ipari/3.jpg" alt="Vendéglátás, élelmiszeripari gyártás és raktározás"
               onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Vendeglatas'" />
-            <h3>VENDÉGLÁTÁS, ÉLELMISZERIPARI GYÁRTÁS ÉS RAKTÁROZÁS</h3>
-            <p>A penészgomba spórái minden helyiségben jelen vannak,
+            <h3 data-key="ipari.feature1.title">VENDÉGLÁTÁS, ÉLELMISZERIPARI GYÁRTÁS ÉS RAKTÁROZÁS</h3>
+            <p data-key="ipari.feature1.desc">A penészgomba spórái minden helyiségben jelen vannak,
               és nedvesség hatására elszaporodnak, mérgező anyagokat és allergéneket bocsátva ki.
               Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                   class="tech">tech</span></span> eljárás hatékonyan elpusztítja a penész spórákat a levegőben és a
@@ -92,8 +108,8 @@
             <a href="ipari-egeszsegugyi.html">
             <img src="assets/images/ipari/1.jpg" alt="Egészségügyi és tanügyi intézmények"
               onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Egeszsegugyi+Int.'" />
-            <h3>EGÉSZSÉGÜGYI ÉS TANÜGYI INTÉZMÉNYEK</H3>
-            <p>Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
+            <h3 data-key="ipari.feature2.title">EGÉSZSÉGÜGYI ÉS TANÜGYI INTÉZMÉNYEK</H3>
+            <p data-key="ipari.feature2.desc">Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                   class="tech">tech</span></span> eljárás számos előnyt kínál az egészségügyi és oktatási intézmények
               számára.
               Hatékonyan eltávolítja a levegőben és a felületeken lévő kórokozókat, vírusokat, baktériumokat és
@@ -110,8 +126,8 @@
             <a href="ipari-gabona.html">
             <img src="assets/images/ipari/2.jpg" alt="Gabona tárolók, silók és raktárak"
               onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Gabona+Tarolok'" />
-            <h3>GABONA TÁROLÓK ÉS RAKTÁRAK</h3>
-            <p>Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
+            <h3 data-key="ipari.feature3.title">GABONA TÁROLÓK ÉS RAKTÁRAK</h3>
+            <p data-key="ipari.feature3.desc">Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                   class="tech">tech</span></span> fertőtlenítés és szagtalanítás számos előnyt biztosít a gabonatartók
               és raktárak számára.
               Hatékonyan eltávolítja a penészgombákat, baktériumokat, kártevőket és egyéb káros tényezőket,
@@ -126,8 +142,8 @@
             <a href="ipari-klima.html">
             <img src="assets/images/ipari/4.jpg" alt="Szellőző- és klímarendszerek"
               onerror="this.onerror=null;this.src='https://placehold.co/300x300/e8f5e8/333333?text=Klima+Rendszerek'" />
-            <h3>KLÍMA- ÉS SZELLŐZŐRENDSZEREK</h3>
-            <p>Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
+            <h3 data-key="ipari.feature4.title">KLÍMA- ÉS SZELLŐZŐRENDSZEREK</h3>
+            <p data-key="ipari.feature4.desc">Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                   class="tech">tech</span></span> fertőtlenítés és szagtalanítás számos előnyt biztosít a szellőző- és
               klímaberendezések számára.
               Hatékonyan semlegesíti az allergéneket, baktériumokat, penészgombákat és vírusokat,
@@ -146,15 +162,16 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
       </div>
     </div>
   </footer>
-
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/mainscript.js"></script>
 </body>
 

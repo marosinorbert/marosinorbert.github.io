@@ -19,23 +19,34 @@
                     <img src="assets/images/logo.png" alt="Ecozone Technologies Logo"
                         onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo';">
                 </a>
+
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#home">Főoldal</a></li>
+                        <li><a href="#home" data-key="nav.home">Főoldal</a></li>
                         <li class="dropdown">
                             <!-- A Szolgáltatások link is #services-re mutat a sima görgetéshez -->
-                            <a href="#services">Szolgáltatások ▾</a>
+                            <a href="#services" data-key="nav.services">Szolgáltatások ▾</a>
                             <ul class="dropdown-content">
                                 <!-- Ezek a linkek külső HTML fájlokra mutatnak, nem belső horgonyokra -->
-                                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
                             </ul>
                         </li>
-                        <li><a href="#about">Rólunk</a></li>
-                        <li><a href="#contact">Kapcsolat</a></li>
+                        <li><a href="#about" data-key="nav.about">Rólunk</a></li>
+                        <li><a href="#contact" data-key="nav.contact">Kapcsolat</a></li>
+                        <li class="lang-switch-nav">
+                            <div class="lang-switch" aria-hidden="false">
+                                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
+                <div class="lang-switch mobile-lang-switch" aria-hidden="false">
+                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
                     <span></span>
@@ -48,17 +59,23 @@
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
         <ul>
-            <li><a href="#home">Főoldal</a></li>
+            <li><a href="#home" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-                <a href="#services">Szolgáltatások ▾</a>
+                <a href="#services" data-key="nav.services">Szolgáltatások ▾</a>
                 <ul class="dropdown-content">
-                    <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                    <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                    <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                    <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                    <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                    <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
                 </ul>
             </li>
-            <li><a href="#about">Rólunk</a></li>
-            <li><a href="#contact">Kapcsolat</a></li>
+            <li><a href="#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="#contact" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+                <div class="lang-switch" aria-hidden="false">
+                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -98,43 +115,37 @@
                 </div>
             </div>
             <div class="container">
-                <div class="hero-content">
-                    <h1>Ecozone Technologies</h1>
-                    <p class="hero-subtitle">Belterek vegyszermentes fertőtlenítése, allergénmentesítése, szagtalanítása
-                        és élősködők írtása <span class="ecozone-tech"><span class="eco1">Eco</span><span
-                                class="zone1">zone</span>-<span class="tech1">tech</span></span> eljárással</p>
-                    <p class="hero-description">Szolgáltatásunkkal gyorsan és hatékonyan megszüntetjük az egészségre
-                        káros hatásokat!</p>
-                </div>
+                    <div class="hero-content">
+                        <h1 data-key="hero.title">Ecozone Technologies</h1>
+                        <p class="hero-subtitle" data-key="hero.subtitle">Belterek vegyszermentes fertőtlenítése, allergénmentesítése, szagtalanítása és élősködők írtása <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span class="tech1">tech</span></span> eljárással</p>
+                        <p class="hero-description" data-key="hero.description">Szolgáltatásunkkal gyorsan és hatékonyan megszüntetjük az egészségre káros hatásokat!</p>
+                    </div>
             </div>
         </section>
 
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Miért válasszon minket?</h2>
+                <h2 class="section-title" data-key="features.title">Miért válasszon minket?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🌿</div>
-                        <h3 class="feature-title">100% VEGYSZERMENTES</h3>
-                        <p class="feature-description">Környezetbarát technológia, amely nem használ vegyszereket</p>
+                        <h3 class="feature-title" data-key="features.card1.title">100% VEGYSZERMENTES</h3>
+                        <p class="feature-description" data-key="features.card1.desc">Környezetbarát technológia, amely nem használ vegyszereket</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🦠</div>
-                        <h3 class="feature-title">ANTIBAKTERIÁLIS</h3>
-                        <p class="feature-description">Gyorsan és hatékonyan elpusztítjuk a penészt, alleregéneket,
-                            baktériumokat, vírusokat és más kórokozókat.</p>
+                        <h3 class="feature-title" data-key="features.card2.title">ANTIBAKTERIÁLIS</h3>
+                        <p class="feature-description" data-key="features.card2.desc">Gyorsan és hatékonyan elpusztítjuk a penészt, alleregéneket, baktériumokat, vírusokat és más kórokozókat.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌍</div>
-                        <h3 class="feature-title">KÖRNYEZETBARÁT</h3>
-                        <p class="feature-description">Az ózon tiszta oxigénné alakul vissza, nem hagy káros
-                            maradványokat</p>
+                        <h3 class="feature-title" data-key="features.card3.title">KÖRNYEZETBARÁT</h3>
+                        <p class="feature-description" data-key="features.card3.desc">Az ózon tiszta oxigénné alakul vissza, nem hagy káros maradványokat</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌸</div>
-                        <h3 class="feature-title">FRISS ILLATÚ KÖRNYEZET</h3>
-                        <p class="feature-description">Kellemetlen szagok megszüntetése és friss, tiszta levegő
-                            biztosítása</p>
+                        <h3 class="feature-title" data-key="features.card4.title">FRISS ILLATÚ KÖRNYEZET</h3>
+                        <p class="feature-description" data-key="features.card4.desc">Kellemetlen szagok megszüntetése és friss, tiszta levegő biztosítása</p>
                     </div>
                 </div>
             </div>
@@ -143,87 +154,87 @@
         <section id="services" class="services">
             <div class="container">
                 <div class="benefits-icons">
-                    <img src="assets/images/main/1.png" alt="Fertőtlenít"
+                    <img src="assets/images/main/1.png" alt="Fertőtlenít" data-img-hu="assets/images/main/1.png" data-img-ro="assets/images/main/1RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
-                    <img src="assets/images/main/2.png" alt="Penésztelenít"
+                    <img src="assets/images/main/2.png" alt="Penésztelenít" data-img-hu="assets/images/main/2.png" data-img-ro="assets/images/main/2RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
-                    <img src="assets/images/main/3.png" alt="Szagtalanít"
+                    <img src="assets/images/main/3.png" alt="Szagtalanít" data-img-hu="assets/images/main/3.png" data-img-ro="assets/images/main/3RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
-                    <img src="assets/images/main/4.png" alt="Gombamentesít"
+                    <img src="assets/images/main/4.png" alt="Gombamentesít" data-img-hu="assets/images/main/4.png" data-img-ro="assets/images/main/4RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
-                    <img src="assets/images/main/5.png" alt="Vegyszermentes"
+                    <img src="assets/images/main/5.png" alt="Vegyszermentes" data-img-hu="assets/images/main/5.png" data-img-ro="assets/images/main/5RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
-                    <img src="assets/images/main/6.png" alt="Élősködőt írt"
+                    <img src="assets/images/main/6.png" alt="Élősködőt írt" data-img-hu="assets/images/main/6.png" data-img-ro="assets/images/main/6RO.png"
                         onerror="this.onerror=null;this.src='https://placehold.co/120x120/4CAF50/ffffff?text=O3';">
                 </div>
-                <h2 class="section-title">Szolgáltatásaink</h2>
+                <h2 class="section-title" data-key="services.title">Szolgáltatásaink</h2>
                 <div class="services-image-container">
                     <div class="service-item">
                         <a href="lakossagi.html">
                             <img src="assets/images/main/lakossag.png" alt="Lakossági szolgáltatások"
                                 onerror="this.onerror=null;this.src='https://placehold.co/250x250/e8f5e8/333333?text=Lakossági';">
-                            <p class="service-title">Lakossági szolgáltatások</p>
+                            <p class="service-title" data-key="services.residential">Lakossági szolgáltatások</p>
                         </a>
                     </div>
                     <div class="service-item">
                         <a href="auto.html">
                             <img src="assets/images/main/auto.png" alt="Jármű fertőtlenítés"
                                 onerror="this.onerror=null;this.src='https://placehold.co/250x250/e8f5e8/333333?text=Autó';">
-                            <p class="service-title">Klíma és járművek</p>
+                            <p class="service-title" data-key="services.cars">Klíma és járművek</p>
                         </a>
                     </div>
                     <div class="service-item">
                         <a href="ipari.html">
                             <img src="assets/images/main/ipar.png" alt="Ipari szolgáltatások"
                                 onerror="this.onerror=null;this.src='https://placehold.co/250x250/e8f5e8/333333?text=Ipari';">
-                            <p class="service-title">Ipari szolgáltatások</p>
+                            <p class="service-title" data-key="services.industrial">Ipari szolgáltatások</p>
                         </a>
                     </div>
                 </div>
                 <div class="services-grid">
                     <div class="service-category">
-                        <h3>Lakossági szolgáltatások</h3>
+                            <h3 data-key="services.residential_title">Lakossági szolgáltatások</h3>
+                            <ul class="service-list">
+                                <li data-key="services.residential.li1">Penész- és allergénmentesítés vegyszermentesen</li>
+                                <li data-key="services.residential.li2">Szagtalanítás természetes eljárással</li>
+                                <li data-key="services.residential.li3">Lakásfelújítás, költözés utáni fertőtlenítés</li>
+                                <li data-key="services.residential.li4">Káresemény: égés, ázás utáni helyreállító fertőtlenítés</li>
+                                <li data-key="services.residential.li5">Babaszoba és gyerekszoba higiénikus fertőtlenítése</li>
+                                <li data-key="services.residential.li6">Lakás, irodák fertőtlenítése és szagtalanítása</li>
+                            </ul>
+                    </div>
+                    <div class="service-category">
+                            <h3 data-key="services.special_title">Speciális kezelések</h3>
+                            <ul class="service-list">
+                                <li data-key="services.special.li1">Penészgombák és dohos szag eltávolítása</li>
+                                <li data-key="services.special.li2">Allergének és poratkák semlegesítése</li>
+                                <li data-key="services.special.li3">Ágyi poloskák és más élősködők elleni védekezés</li>
+                                <li data-key="services.special.li4">Újszülött érkezése előtti fertőtlenítés</li>
+                                <li data-key="services.special.li5">Betegségek utáni fertőtlenítés</li>
+                                <li data-key="services.special.li6">Lakásvásárlás vagy költözés előtti fertőtlenítés</li>
+                            </ul>
+                    </div>
+                    <div class="service-category">
+                        <h3 data-key="services.cars_title">Klíma és járművek</h3>
                         <ul class="service-list">
-                            <li>Penész- és allergénmentesítés vegyszermentesen</li>
-                            <li>Szagtalanítás természetes eljárással</li>
-                            <li>Lakásfelújítás, költözés utáni fertőtlenítés</li>
-                            <li>Káresemény: égés, ázás utáni helyreállító fertőtlenítés</li>
-                            <li>Babaszoba és gyerekszoba higiénikus fertőtlenítése</li>
-                            <li>Lakás, irodák fertőtlenítése és szagtalanítása</li>
+                            <li data-key="services.cars.li1">Lakásklíma tisztítása</li>
+                            <li data-key="services.cars.li2">Autóklíma és utastér fertőtlenítés</li>
+                            <li data-key="services.cars.li3">Személyautók, autóbuszok fertőtlenítése</li>
+                            <li data-key="services.cars.li4">Teherautók, hűtőgépjárművek kezelése</li>
+                            <li data-key="services.cars.li5">Téli sport bakancsok és korcsolyák kezelése</li>
                         </ul>
                     </div>
                     <div class="service-category">
-                        <h3>Speciális kezelések</h3>
+                        <h3 data-key="services.industrial_title">Ipari szolgáltatások</h3>
                         <ul class="service-list">
-                            <li>Penészgombák és dohos szag eltávolítása</li>
-                            <li>Allergének és poratkák semlegesítése</li>
-                            <li>Ágyi poloskák és más élősködők elleni védekezés</li>
-                            <li>Újszülött érkezése előtti fertőtlenítés</li>
-                            <li>Betegségek utáni fertőtlenítés</li>
-                            <li>Lakásvásárlás vagy költözés előtti fertőtlenítés</li>
-                        </ul>
-                    </div>
-                    <div class="service-category">
-                        <h3>Klíma és járművek</h3>
-                        <ul class="service-list">
-                            <li>Lakásklíma tisztítása</li>
-                            <li>Autóklíma és utastér fertőtlenítés</li>
-                            <li>Személyautók, autóbuszok fertőtlenítése</li>
-                            <li>Teherautók, hűtőgépjárművek kezelése</li>
-                            <li>Téli sport bakancsok és korcsolyák kezelése</li>
-                        </ul>
-                    </div>
-                    <div class="service-category">
-                        <h3>Ipari szolgáltatások</h3>
-                        <ul class="service-list">
-                            <li>Egészségügyi intézmények, kórházak, műtők</li>
-                            <li>Élelmiszeripari üzemek és tárolók</li>
-                            <li>Klíma és szellőző rendszerek</li>
-                            <li>Mezőgazdasági létesítmények, állattartó telepek</li>
-                            <li>Logisztikai központok és raktárak</li>
-                            <li>Szállodák, éttermek, konyhák</li>
-                            <li>Iskolák, óvodák és közintézmények</li>
-                            <li>Idősotthonok, edzőtermek</li>
+                            <li data-key="services.industrial.li1">Egészségügyi intézmények, kórházak, műtők</li>
+                            <li data-key="services.industrial.li2">Élelmiszeripari üzemek és tárolók</li>
+                            <li data-key="services.industrial.li3">Klíma és szellőző rendszerek</li>
+                            <li data-key="services.industrial.li4">Mezőgazdasági létesítmények, állattartó telepek</li>
+                            <li data-key="services.industrial.li5">Logisztikai központok és raktárak</li>
+                            <li data-key="services.industrial.li6">Szállodák, éttermek, konyhák</li>
+                            <li data-key="services.industrial.li7">Iskolák, óvodák és közintézmények</li>
+                            <li data-key="services.industrial.li8">Idősotthonok, edzőtermek</li>
                         </ul>
                     </div>
                 </div>
@@ -233,19 +244,19 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="about-content">
-                    <h2 class="section-title">Az <span class="ecozone-tech"><span class="eco">Eco</span><span
+                    <h2 class="section-title" data-key="about.title">Az <span class="ecozone-tech"><span class="eco">Eco</span><span
                                 class="zone">zone</span>-<span class="tech">tech</span></span> eljárásról</h2>
-                    <p class="about-text">
+                    <p class="about-text" data-key="about.p1">
                         Környezetbarát, 100%-ban vegyszermentes, biztonságos fertőtlenítési, szagtalanítási és
                         légtisztítási eljárást alkalmazunk. Az ózont ózongenerátorral állítjuk elő magas koncentrációban
                         a hatékony fertőtlenítés, szagtalanítás és élősködők irtása érdekében.
                     </p>
-                    <p class="about-text">
+                    <p class="about-text" data-key="about.p2">
                         Az ózon a fertőtlenítés után tiszta oxigénné alakul vissza. Az eredmény allergénektől,
                         kórokozóktól, élősködőktől és kellemetlen szagoktól mentes, higiénikus és friss illatú
                         környezet.
                     </p>
-                    <p class="about-text">
+                    <p class="about-text" data-key="about.p3">
                         Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span
                                 class="tech">tech</span></span> az egyik leghatékonyabb vegyszermentes fertőtlenítési és
                         szagtalanítási eljárás, ami rendkívül gyorsan elpusztítja a mikroorganizmusokat, allergéneket,
@@ -258,18 +269,18 @@
 
         <section class="cta">
             <div class="container">
-                <h2>Készen áll a tiszta, egészséges környezetre?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Lépjen kapcsolatba velünk!</p>
-                <a href="kapcsolat.html" class="cta-button">Kapcsolatfelvétel</a>
+                <h2 data-key="cta.title">Készen áll a tiszta, egészséges környezetre?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;" data-key="cta.subtitle">Lépjen kapcsolatba velünk!</p>
+                <a href="kapcsolat.html" class="cta-button" data-key="cta.button">Kapcsolatfelvétel</a>
             </div>
         </section>
     </main>
 
     <footer id="contact">
         <div class="container">
-            <div class="footer-content">
-                <h3>Ecozone Technologies</h3>
-                <p>© 2026 Ecozone Technologies - Minden jog fenntartva</p>
+                <div class="footer-content">
+                <h3 data-key="footer.company">Ecozone Technologies</h3>
+                <p data-key="footer.copyright">© 2026 Ecozone Technologies - Minden jog fenntartva</p>
                 <p style="text-align: center; font-size: 0.9em; color: #555;"><a
                         href="https://www.facebook.com/mrsnrbrt" style="color: #7a7a7a; text-decoration: none;"
                         target="_blank" rel="noopener noreferrer">made by mrsnrbrt</a></p>
@@ -277,6 +288,8 @@
         </div>
     </footer>
 
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/mainscript.js"></script>
 </body>
 

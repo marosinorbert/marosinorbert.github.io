@@ -20,19 +20,29 @@
                 </a>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
                         <li class="dropdown">
-                            <a href="index.html#services">Szolgáltatások ▾</a>
+                            <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
                             <ul class="dropdown-content">
-                                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
                             </ul>
                         </li>
-                        <li><a href="index.html#about">Rólunk</a></li>
-                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                        <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+                        <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+                        <li class="lang-switch-nav">
+                            <div class="lang-switch">
+                                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
+                <div class="lang-switch mobile-lang-switch">
+                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
                     <span></span>
                     <span></span>
@@ -44,26 +54,30 @@
 
     <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
         <ul>
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-                <a href="index.html#services">Szolgáltatások ▾</a>
+                <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
                 <ul class="dropdown-content">
-                    <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                    <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                    <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                    <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                    <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                    <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
                 </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
-        </ul>
-    </div>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+        <li class="lang-switch-nav">
+          <div class="lang-switch">
+            <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+            <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+          </div>
+        </li>
 
     <main>
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Rossz szagok</h1>
-                    <p class="hero-subtitle">
+                    <h1 data-key="rosszSzagok.title">Rossz szagok</h1>
+                    <p class="hero-subtitle" data-key="hero.subtitle">
                         Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                                 class="tech1">tech</span></span> technológia a leghatékonyabb környezetbarát
                         szagtalanító eljárás, amely nem csupán a levegőből, hanem a porózus felületekből is lebontja a
@@ -78,13 +92,13 @@
                 <div class="features-grid-peneszgombak">
                     <div class="feature-card-peneszgombak-with-image">
                         <div class="feature-card-peneszgombak">
-                            <h3>Hogyan történik a szagtalanítás?</h3>
-                            <p>
-                                A szagtalanításhoz nagyteljesítményű mobil ózongenerátort használunk. A kezelés 60-240
-                                percet vehet igénybe, a helyiség méretétől függően. A kezelés alatt nem lehet a
-                                helyiségben tartózkodni, de kollégáink folyamatosan ellenőrzik a hatékonyságot, majd a
-                                kezelés végén az ózonkoncentrációt is mérik a biztonságos átadás érdekében.
-                            </p>
+                                <h3 data-key="rosszSzagok.how.title">Hogyan történik a szagtalanítás?</h3>
+                                <p data-key="rosszSzagok.how.desc">
+                                    A szagtalanításhoz nagyteljesítményű mobil ózongenerátort használunk. A kezelés 60-240
+                                    percet vehet igénybe, a helyiség méretétől függően. A kezelés alatt nem lehet a
+                                    helyiségben tartózkodni, de kollégáink folyamatosan ellenőrzik a hatékonyságot, majd a
+                                    kezelés végén az ózonkoncentrációt is mérik a biztonságos átadás érdekében.
+                                </p>
                         </div>
                         <div class="image-content-column">
                             <img src="assets/images/rosszSzagok/szagtalanitas1.jpg" alt="Ózonos szagtalanítás" class="content-image"
@@ -93,9 +107,9 @@
                     </div>
 
                     <div class="feature-card-peneszgombak-with-image reversed-layout">
-                        <div class="feature-card-peneszgombak">
-                            <h3>Az ózon hatása a különböző szagokra</h3>
-                            <p>
+                            <div class="feature-card-peneszgombak">
+                            <h3 data-key="rosszSzagok.effect.title">Az ózon hatása a különböző szagokra</h3>
+                            <p data-key="rosszSzagok.effect.desc">
                                 Az ózon megszünteti a dohányfüstben található fenol gázok által okozott irritációt és
                                 szagot. Sokkal hatékonyabb, mint a hagyományos illatosítók vagy légszűrők, mert lebontja
                                 a szagmolekulákat. Ideális megoldás költözés előtti fertőtlenítésre és a dohos vagy égés
@@ -109,9 +123,9 @@
                         </div>
                     </div>
                     <div class="feature-card-peneszgombak-with-image">
-                        <div class="feature-card-peneszgombak">
-                            <h3>Építési és kisállat szagok</h3>
-                            <p>
+                            <div class="feature-card-peneszgombak">
+                            <h3 data-key="rosszSzagok.building.title">Építési és kisállat szagok</h3>
+                            <p data-key="rosszSzagok.building.desc">
                                 Az építkezés után visszamaradt vegyszerszagok, formaldehidek is hatékonyan
                                 eltávolíthatók ózonnal, megakadályozva, hogy a bútorok átvegyék a szagokat. Emellett a
                                 háziállatok okozta kellemetlen szagokat is eredményesen szünteti meg az ózon, miközben
@@ -126,12 +140,12 @@
 
                     <div class="highlight-tips-box">
                         <div class="tips-header">
-                            <span class="tip-icon">💡</span>
-                            <h3>Tippek</h3>
-                        </div>
+                                <span class="tip-icon">💡</span>
+                                <h3 data-key="rosszSzagok.tips.title">Tippek</h3>
+                            </div>
                         <ul>
-                            <li>Ha festéssel szeretné eltüntetni a kellemetlen szagokat, a szagtalanítást mindig a festés előtt ajánlott elvégezni.</li>
-                            <li>Ha tervezi a kellemetlen szagú szőnyeg, bútorkárpit vagy más nagyobb lakástextília nedves kitisztítását is, akkor 
+                            <li data-key="rosszSzagok.tips.li1">Ha festéssel szeretné eltüntetni a kellemetlen szagokat, a szagtalanítást mindig a festés előtt ajánlott elvégezni.</li>
+                            <li data-key="rosszSzagok.tips.li2">Ha tervezi a kellemetlen szagú szőnyeg, bútorkárpit vagy más nagyobb lakástextília nedves kitisztítását is, akkor 
                                 még előtte ajánlatos a szagtalanító eljárást elvégezni.</li>
                         </ul>
                     </div>
@@ -145,8 +159,8 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <h3>Ecozone Technologies</h3>
-                <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+                <h3 data-key="footer.company">Ecozone Technologies</h3>
+                <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
                 <p style="text-align: center; font-size: 0.9em; color: #555;"><a
                         href="https://www.facebook.com/mrsnrbrt" style="color: #7a7a7a; text-decoration: none;"
                         target="_blank" rel="noopener noreferrer">made by
@@ -154,6 +168,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/i18n.js"></script>
 
     <script src="assets/js/mainscript.js"></script>
 </body>

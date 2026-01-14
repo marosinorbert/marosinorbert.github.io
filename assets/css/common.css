@@ -79,10 +79,13 @@ header {
     background: rgba(200, 230, 200, 0.95);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
-    margin-top: 6px;
+    overflow: visible;
+    /* Minimal buffer so dropdown doesn't cover the tab */
+    margin-top: -4px;
+    padding-top: 4px;
     min-width: 220px;
     z-index: 900;
+    pointer-events: auto;
 }
 
 .nav-links .dropdown-content li {
@@ -102,7 +105,10 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.nav-links .dropdown:hover .dropdown-content {
+/* Keep dropdown open when hovering the trigger, focusing within, or hovering the menu itself */
+.nav-links .dropdown:hover .dropdown-content,
+.nav-links .dropdown:focus-within .dropdown-content,
+.nav-links .dropdown-content:hover {
     display: block;
 }
 
@@ -164,8 +170,8 @@ header {
     position: fixed;
     top: 80px;
     right: 20px;
-    width: 280px;
-    max-height: 80vh;
+    width: 220px;
+    max-height: 70vh;
     background: rgba(200, 230, 200, 0.98);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -210,20 +216,21 @@ header {
 
 .mobile-nav ul {
     list-style: none;
-    padding: 2rem;
+    padding: 0.7rem 0.5rem;
     text-align: center;
 }
 
 .mobile-nav ul li {
-    margin: 2rem 0;
+    margin: 0.7rem 0;
 }
 
 .mobile-nav ul li a {
     color: #0077b6;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem;
+    line-height: 1.2;
     display: block;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -233,6 +240,52 @@ header {
     color: #ffffff;
     background-color: #00aefd;
     box-shadow: 0 4px 12px rgba(0, 174, 239, 0.5);
+}
+
+.mobile-nav .lang-switch-nav {
+    justify-content: center;
+    padding: 0.4rem 0;
+}
+
+.mobile-nav .lang-switch {
+    gap: 1rem;
+}
+
+.mobile-nav .lang-switch button {
+    font-size: 1.2rem;
+}
+
+/* Language Switch Styles */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-switch button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.lang-switch button:hover {
+    background-color: rgba(0, 174, 239, 0.2);
+    transform: scale(1.1);
+}
+
+.lang-switch-nav {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-lang-switch {
+    display: none;
+    /* Hidden on desktop */
 }
 
 /* Hero Section - Alapvető, közös részek */
@@ -672,6 +725,16 @@ footer {
     .nav-links {
         display: none;
         /* Desktop nav elrejtése */
+    }
+
+    .lang-switch-nav {
+        display: none;
+        /* Hide language switch from desktop nav on mobile */
+    }
+
+    .mobile-lang-switch {
+        display: flex;
+        /* Show mobile language switch */
     }
 
     .mobile-menu-btn {

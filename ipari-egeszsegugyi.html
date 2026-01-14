@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,8 +78,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Egészségügyi és Tanügyi Intézmények</h1>
-          <p class="hero-subtitle">
+          <h1 data-key="ipari-egeszsegugyi.title">Egészségügyi és Tanügyi Intézmények</h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás az egyik leghatékonyabb,
             100%-ban vegyszermentes módszer az egészségügyi és oktatási intézmények fertőtlenítésére. Elpusztítja a baktériumokat, vírusokat és allergéneket – még a nehezen hozzáférhető helyeken is, garantálva a biztonságos és egészséges környezetet.
@@ -77,12 +93,12 @@
         <div class="features-grid-egeszsegugyi">
           <div class="feature-card-egeszsegugyi-with-image">
             <div class="feature-card-egeszsegugyi">
-              <h3>Fertőzéseknek kitett környezet</h3>
-              <p>
+              <h3 data-key="ipari-egeszsegugyi.section1.title">Fertőzéseknek kitett környezet</h3>
+              <p data-key="ipari-egeszsegugyi.section1.p1">
                 Az egészségügyi intézmények, betegszobák és várótermek kiemelt kockázatot jelentenek a járványos megbetegedések és kórokozók terjedése szempontjából. 
                 A baktériumok és vírusok a levegőben, a felületeken és az orvosi eszközökön egyaránt jelen vannak, veszélyeztetve a személyzetet és a betegeket.
               </p>
-              <p>
+              <p data-key="ipari-egeszsegugyi.section1.p2">
                 Az oktatási intézmények szintén a fertőzések gócpontjai lehetnek, ahol a gyermekek közötti szoros kontaktus felgyorsítja a kórokozók átadását.
               </p>
             </div>
@@ -94,13 +110,12 @@
 
           <div class="feature-card-egeszsegugyi-with-image reversed-layout">
             <div class="feature-card-egeszsegugyi">
-              <h3>Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
-                class="tech1">tech</span></span> eljárás hatása</h3>
-              <p>
+              <h3 data-key="ipari-egeszsegugyi.section2.title">Az Ecozone-tech eljárás hatása</h3>
+              <p data-key="ipari-egeszsegugyi.section2.p1">
                 Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span class="tech">tech</span></span> technológia hatékonyan semmisíti meg a vírusokat és baktériumokat. 
                 Az eljárás a levegőben és a felületeken egyaránt kifejti hatását, így gátolva meg a fertőzési láncok kialakulását.
               </p>
-              <p>
+              <p data-key="ipari-egeszsegugyi.section2.p2">
                 A vegyszermentes eljárás teljesen biztonságos az egészségügyi dolgozók és a páciensek számára, alkalmazása után nincs szükség speciális óvintézkedésekre. 
                 Emellett hatékonyan távolítja el az allergéneket és a kellemetlen szagokat is.
               </p>
@@ -113,11 +128,11 @@
 
           <div class="feature-card-egeszsegugyi-with-image">
             <div class="feature-card-egeszsegugyi">
-              <h3>Előnyök az intézmény számára</h3>
-              <p>
+              <h3 data-key="ipari-egeszsegugyi.section3.title">Előnyök az intézmény számára</h3>
+              <p data-key="ipari-egeszsegugyi.section3.p1">
                 A rendszeres <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span class="tech">tech</span></span> kezelés minimalizálja a járványok kockázatát, védelmet nyújtva a dolgozóknak és a látogatóknak.
               </p>
-              <p>
+              <p data-key="ipari-egeszsegugyi.section3.p2">
                 Oktatási intézményekben a tiszta, kórokozómentes levegő hozzájárul a diákok és tanárok jobb közérzetéhez és koncentrációjához. 
                 Az eljárás nem zavarja az intézmény napi működését, és nem igényel speciális vegyi védőfelszerelést a használat során.
               </p>
@@ -135,8 +150,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+          <h3 data-key="footer.company">Ecozone Technologies</h3>
+          <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
                 <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
@@ -145,6 +160,8 @@
   </footer>
 
   <script src="assets/js/mainscript.js"></script>
+        <script src="assets/js/translations.js"></script>
+        <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>

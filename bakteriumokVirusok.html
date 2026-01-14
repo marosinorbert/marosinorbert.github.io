@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,8 +78,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Baktériumok és Vírusok</h1>
-          <p class="hero-subtitle">
+          <h1 data-key="bakteriumok.title">Baktériumok és Vírusok</h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás az egyik leghatékonyabb,
             100%-ban vegyszermentes módszer a levegő és a felületek fertőtlenítésére. Elpusztítja a baktériumokat, vírusokat és kórokozókat – még a nehezen hozzáférhető helyeken is, biztosítva a biztonságos és egészséges környezetet mindenki számára.
@@ -77,16 +93,10 @@
         <div class="features-grid-bakteriumok">
           <div class="feature-card-bakteriumok-with-image">
             <div class="feature-card-bakteriumok">
-              <h3>Miért veszélyesek?</h3>
-              <p>
-                A baktériumok és vírusok láthatatlanul terjednek a levegőben, a felületeken és az emberi érintkezés során. 
-                Fertőzéseket, megbetegedéseket és járványokat okozhatnak, amelyek különösen veszélyesek a gyermekekre, idősekre és legyengült immunrendszerű emberekre.
-              </p>
-              <p>
-                Sokszor már azelőtt továbbadhatóak, hogy a fertőzött személy észrevenné a tüneteket. Ezért a megelőzés kulcsfontosságú: 
-                a higiénia és a rendszeres fertőtlenítés segíthet minimalizálni a fertőzésveszélyt.
-              </p>
-            </div>
+                <h3 data-key="bakteriumok.section1.title">Miért veszélyesek?</h3>
+                <p data-key="bakteriumok.section1.p1">A baktériumok és vírusok láthatatlanul terjednek a levegőben, a felületeken és az emberi érintkezés során. Fertőzéseket, megbetegedéseket és járványokat okozhatnak, amelyek különösen veszélyesek a gyermekekre, idősekre és legyengült immunrendszerű emberekre.</p>
+                <p data-key="bakteriumok.section1.p2">Sokszor már azelőtt továbbadhatóak, hogy a fertőzött személy észrevenné a tüneteket. Ezért a megelőzés kulcsfontosságú: a higiénia és a rendszeres fertőtlenítés segíthet minimalizálni a fertőzésveszélyt.</p>
+              </div>
             <div class="image-content-column">
               <img src="assets/images/bakteriumokVirusok/bakterium1.jpg" alt="Baktériumok mikroszkóp alatt" class="content-image"
                 onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Bakterium1';" />
@@ -94,17 +104,10 @@
           </div>
 
           <div class="feature-card-bakteriumok-with-image reversed-layout">
-            <div class="feature-card-bakteriumok">
-              <h3>Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
-                class="tech1">tech</span></span> eljárás hatása</h3>
-              <p>
-                Az ózon erős oxidáló hatású gáz, amely képes elpusztítani a baktériumok és vírusok sejtjeit. 
-                Amikor az ózon molekula találkozik egy kórokozóval, az oxidációs folyamat során megbontja a sejtfalat vagy a vírus burkát, ezzel hatástalanítva azt.
-              </p>
-              <p>
-                A gáz halmazállapot előnye, hogy minden zugba és rejtett felületre bejut, ahol a hagyományos fertőtlenítőszerek nem hatékonyak. 
-                Ez teszi ideálissá az ózont olyan helyeken, ahol teljes körű tisztaság és biztonság szükséges.
-              </p>
+              <div class="feature-card-bakteriumok">
+              <h3 data-key="bakteriumok.section2.title">Az Ecozone-tech eljárás hatása</h3>
+              <p data-key="bakteriumok.section2.p1">Az ózon erős oxidáló hatású gáz, amely képes elpusztítani a baktériumok és vírusok sejtjeit. Amikor az ózon molekula találkozik egy kórokozóval, az oxidációs folyamat során megbontja a sejtfalat vagy a vírus burkát, ezzel hatástalanítva azt.</p>
+              <p data-key="bakteriumok.section2.p2">A gáz halmazállapot előnye, hogy minden zugba és rejtett felületre bejut, ahol a hagyományos fertőtlenítőszerek nem hatékonyak. Ez teszi ideálissá az ózont olyan helyeken, ahol teljes körű tisztaság és biztonság szükséges.</p>
             </div>
             <div class="image-content-column">
               <img src="bakteriumokVirusok/bakterium2.jpg" alt="Ózon hatása kórokozókra" class="content-image"
@@ -114,15 +117,9 @@
 
           <div class="feature-card-bakteriumok-with-image">
             <div class="feature-card-bakteriumok">
-              <h3>Felhasználási területek</h3>
-              <p>
-                Az ózonos fertőtlenítés kiválóan alkalmazható otthonokban, irodákban, egészségügyi intézményekben, járművekben és ipari környezetben is. 
-                A módszer segítségével gyorsan és hatékonyan távolíthatók el a levegőben és a felületeken jelenlévő kórokozók.
-              </p>
-              <p>
-                Egyre többen alkalmazzák magánlakásokban is, például konyhák, fürdőszobák vagy pincék tisztítására. 
-                Emellett gyakran használják autók belső terének fertőtlenítésére, ahol a szellőzőrendszer és a szűk helyek más módszerekkel nehezen érhetők el.
-              </p>
+              <h3 data-key="bakteriumok.section3.title">Felhasználási területek</h3>
+              <p data-key="bakteriumok.section3.p1">Az ózonos fertőtlenítés kiválóan alkalmazható otthonokban, irodákban, egészségügyi intézményekben, járművekben és ipari környezetben is. A módszer segítségével gyorsan és hatékonyan távolíthatók el a levegőben és a felületeken jelenlévő kórokozók.</p>
+              <p data-key="bakteriumok.section3.p2">Egyre többen alkalmazzák magánlakásokban is, például konyhák, fürdőszobák vagy pincék tisztítására. Emellett gyakran használják autók belső terének fertőtlenítésére, ahol a szellőzőrendszer és a szűk helyek más módszerekkel nehezen érhetők el.</p>
             </div>
             <div class="image-content-column">
               <img src="bakteriumokVirusok/bakterium3.jpg" alt="Tiszta környezet" class="content-image"
@@ -138,8 +135,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;">
           <a href="https://www.facebook.com/mrsnrbrt" style="color: #7a7a7a; text-decoration: none;" target="_blank"
             rel="noopener noreferrer">made by mrsnrbrt</a>
@@ -147,7 +144,8 @@
       </div>
     </div>
   </footer>
-
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/mainscript.js"></script>
 </body>
 

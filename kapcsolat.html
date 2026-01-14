@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" class="active" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,65 +54,70 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" class="active" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
   <main>
     <section id="contact-info" class="content-section">
       <div class="container">
-        <h1 class="section-title">Lépjen velünk kapcsolatba</h1>
+        <h1 class="section-title" data-key="contact.title">Lépjen velünk kapcsolatba</h1>
 
         <div class="contact-details-grid">
           <div class="contact-card contact-info-card">
-            <h2>Elérhetőségek</h2>
-            <p><strong>Jánosi Jenő</strong></p>
-            <p><strong>Telefonszám:</strong> <a href="tel:+40740591717">(+40) 740-591-717</a></p>
+            <h2 data-key="contact.info">Elérhetőségek</h2>
+            <p><strong data-key="contact.owner">Jánosi Jenő</strong></p>
+            <p><strong data-key="contact.phone_label">Telefonszám:</strong> <a href="tel:+40740591717" data-key="phone.number">(+40) 740-591-717</a></p>
             <p>
-              <strong>Email:</strong>
+              <strong data-key="contact.email_label">Email:</strong>
               <a href="mailto:ecozone.technologies@gmail.com">ecozone.technologies@gmail.com</a>
             </p>
-            <p><strong>Iroda címe:</strong> 535600, Székelyudvarhely, Virágok Sétánya 4/17</p>
+            <p><strong data-key="contact.office_label">Iroda címe:</strong> <span data-key="contact.office_address">535600, Székelyudvarhely, Virágok Sétánya 4/17</span></p>
           </div>
 
           <div class="contact-form-wrapper">
-            <h2 class="section-title contact-form-title">Küldjön üzenetet!</h2>
+            <h2 class="section-title contact-form-title" data-key="contact.send_message">Küldjön üzenetet!</h2>
             <form action="https://formspree.io/f/xqabgaqy" method="POST" class="contact-form">
               <div class="form-group">
-                <label for="name">Név:</label>
-                <input type="text" id="name" name="Név" placeholder="Vezetéknév Keresztnév" required />
+                <label for="name" data-key="contact.form.name">Név:</label>
+                <input type="text" id="name" name="Név" placeholder="Vezetéknév Keresztnév" data-key="contact.form.name" required />
               </div>
               <div class="form-group">
-                <label for="phone">Telefonszám:</label>
-                <input type="tel" id="phone" name="Telefonszám" placeholder="0712345678" pattern="[0-9]{1,10}"
+                <label for="phone" data-key="contact.form.phone">Telefonszám:</label>
+                <input type="tel" id="phone" name="Telefonszám" placeholder="0712345678" data-key="contact.form.phone" pattern="[0-9]{1,10}"
                   title="Kérjük, csak számokat (0-9) adjon meg, maximum 10 számjegyet." maxlength="10"
                   oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);" required />
               </div>
               <div class="form-group">
-                <label for="email">Email cím:</label>
-                <input type="email" id="email" name="_replyto" placeholder="pelda@email.com" required />
+                <label for="email" data-key="contact.form.email">Email cím:</label>
+                <input type="email" id="email" name="_replyto" placeholder="pelda@email.com" data-key="contact.form.email" required />
               </div>
               <div class="form-group">
-                <label for="message">Üzenet:</label>
-                <textarea id="message" name="Üzenet" rows="6" placeholder="Szia! Azért írok, mert ..."
-                  required></textarea>
+                <label for="message" data-key="contact.form.message">Üzenet:</label>
+                <textarea id="message" name="Üzenet" rows="6" placeholder="Szia! Azért írok, mert ..." data-key="contact.form.message" required></textarea>
               </div>
-              <button type="submit" class="submit-button">Üzenet elküldése</button>
+              <button type="submit" class="submit-button" data-key="contact.form.submit">Üzenet elküldése</button>
             </form>
           </div>
 
           <div class="contact-card social-media-card">
-            <h2>Kövessen minket!</h2>
+            <h2 data-key="social.follow">Kövessen minket!</h2>
             <div class="social-media-icons">
               <a href="https://www.facebook.com/profile.php?id=100095340646190&locale=hu_HU" target="_blank"
                 rel="noopener noreferrer">
@@ -118,7 +133,7 @@
                   onerror="this.onerror=null;this.src='https://placehold.co/60x60/1da1f2/ffffff?text=T';" />
               </a>
             </div>
-            <p class="social-text">Kövesse munkánkat a közösségi médiában!</p>
+            <p class="social-text" data-key="social.text">Kövesse munkánkat a közösségi médiában!</p>
           </div>
         </div>
       </div>
@@ -128,8 +143,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+        <h3 data-key="footer.company">Ecozone Technologies</h3>
+        <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
         <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
@@ -137,6 +152,8 @@
     </div>
   </footer>
 
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/mainscript.js"></script>
 </body>
 

@@ -20,19 +20,29 @@
         </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
-              <a href="index.html#services">Szolgáltatások ▾</a>
+              <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
               <ul class="dropdown-content">
-                <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-                <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-                <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+                <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+                <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+                <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
               </ul>
             </li>
-            <li><a href="index.html#about">Rólunk</a></li>
-            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+            <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+            <li class="lang-switch-nav">
+              <div class="lang-switch">
+                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="lang-switch mobile-lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
           <span></span>
           <span></span>
@@ -44,17 +54,23 @@
 
   <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
     <ul>
-      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
-        <a href="index.html#services">Szolgáltatások ▾</a>
+        <a href="index.html#services" data-key="nav.services">Szolgáltatások ▾</a>
         <ul class="dropdown-content">
-          <li><a href="lakossagi.html">Lakossági szolgáltatások</a></li>
-          <li><a href="ipari.html">Ipari szolgáltatások</a></li>
-          <li><a href="auto.html">Járművek fertőtlenítése</a></li>
+          <li><a href="lakossagi.html" data-key="nav.residential">Lakossági szolgáltatások</a></li>
+          <li><a href="ipari.html" data-key="nav.industrial">Ipari szolgáltatások</a></li>
+          <li><a href="auto.html" data-key="nav.cars">Járművek fertőtlenítése</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Rólunk</a></li>
-      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="index.html#about" data-key="nav.about">Rólunk</a></li>
+      <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
+      <li class="lang-switch-nav">
+        <div class="lang-switch">
+          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
+          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -62,8 +78,8 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Gabonatárolók és Raktárak</h1>
-          <p class="hero-subtitle">
+          <h1 data-key="ipari-gabona.title">Gabonatárolók és Raktárak</h1>
+          <p class="hero-subtitle" data-key="hero.subtitle">
             Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
                 class="tech1">tech</span></span> eljárás az egyik leghatékonyabb,
             100%-ban vegyszermentes módszer a gabonatárolók és raktárak fertőtlenítésére és szagtalanítására. Elpusztítja a penészgombákat, baktériumokat és kártevőket, garantálva a termény minőségét és biztonságát.
@@ -77,12 +93,12 @@
         <div class="features-grid-gabona">
           <div class="feature-card-gabona-with-image">
             <div class="feature-card-gabona">
-              <h3>A gabona romlásának veszélyei</h3>
-              <p>
+              <h3 data-key="ipari-gabona.section1.title">A gabona romlásának veszélyei</h3>
+              <p data-key="ipari-gabona.section1.p1">
                 A gabonatárolók és raktárak fokozottan kitettek a penészgombák és baktériumok elszaporodásának.
                 A magas páratartalom, a hőmérséklet-ingadozás és a szerves anyagok jelenléte ideális feltételeket teremt a káros mikrobák számára.
               </p>
-              <p>
+              <p data-key="ipari-gabona.section1.p2">
                 A penészgombák által termelt mikotoxinok súlyos veszélyt jelentenek az emberek és az állatállomány egészségére, emellett ellehetetlenítik az élelmiszerbiztonsági szabványok betartását. 
                 A kártevők, mint a rovarok és atkák, tovább rontják a termény minőségét.
               </p>
@@ -95,13 +111,12 @@
 
           <div class="feature-card-gabona-with-image reversed-layout">
             <div class="feature-card-gabona">
-              <h3>Az <span class="ecozone-tech"><span class="eco1">Eco</span><span class="zone1">zone</span>-<span
-                class="tech1">tech</span></span> eljárás hatása</h3>
-              <p>
+              <h3 data-key="ipari-gabona.section2.title">Az Ecozone-tech eljárás hatása</h3>
+              <p data-key="ipari-gabona.section2.p1">
                 Az <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span class="tech">tech</span></span> technológia hatékonyan semmisíti meg a penészgombákat, baktériumokat és kártevőket,
                 megóvva a raktárak tartalmát a biológiai szennyeződésektől.
               </p>
-              <p>
+              <p data-key="ipari-gabona.section2.p2">
                 Az ózonkezelés teljesen vegyszermentes, így nem hagy hátra mérgező maradványokat a gabonán, és környezetbarát megoldást kínál. 
                 Megelőzi a termény romlását, jelentősen meghosszabbítja a tárolhatósági időt, és megszünteti a dohos szagokat.
               </p>
@@ -114,11 +129,11 @@
 
           <div class="feature-card-gabona-with-image">
             <div class="feature-card-gabona">
-              <h3>Gazdasági előnyök</h3>
-              <p>
+              <h3 data-key="ipari-gabona.section3.title">Gazdasági előnyök</h3>
+              <p data-key="ipari-gabona.section3.p1">
                 A rendszeres <span class="ecozone-tech"><span class="eco">Eco</span><span class="zone">zone</span>-<span class="tech">tech</span></span> kezelés drasztikusan csökkenti a tárolási veszteséget, megvédi a gazdák befektetéseit és hosszú távú költségmegtakarítást eredményez.
               </p>
-              <p>
+              <p data-key="ipari-gabona.section3.p2">
                 Az eljárás segít elkerülni a biztonsági kockázatokat és a szabályozási előírások megsértését, amelyek súlyos bírságokkal járhatnak. 
                 A tiszta, kifogástalan minőségű gabona magasabb piaci értéket és jobb eladhatóságot biztosít.
               </p>
@@ -136,8 +151,8 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-content">
-        <h3>Ecozone Technologies</h3>
-        <p> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
+          <h3 data-key="footer.company">Ecozone Technologies</h3>
+          <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
                 <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
             style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
@@ -146,6 +161,8 @@
   </footer>
 
   <script src="assets/js/mainscript.js"></script>
+        <script src="assets/js/translations.js"></script>
+        <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>
