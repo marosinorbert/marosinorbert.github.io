@@ -34,13 +34,17 @@
       }
     });
     
-    // Hide current language button and show only the other language
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
+    // Hide current language button and show only the other language (desktop)
+    document.querySelectorAll('.lang-switch-nav button').forEach(btn => {
       if (btn.dataset.lang === lang) {
         btn.style.display = 'none';
       } else {
         btn.style.display = '';
       }
+    });
+    // On mobile, always show both language buttons
+    document.querySelectorAll('.mobile-lang-switch button').forEach(btn => {
+      btn.style.display = '';
     });
   }
 
@@ -48,14 +52,19 @@
     setStoredLang(lang);
     applyTranslations(lang);
     // update active state on buttons if present
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
+    // Desktop nav: hide current, show other
+    document.querySelectorAll('.lang-switch-nav button').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
-      // Hide current language button and show only the other language
       if (btn.dataset.lang === lang) {
         btn.style.display = 'none';
       } else {
         btn.style.display = '';
       }
+    });
+    // Mobile: always show both
+    document.querySelectorAll('.mobile-lang-switch button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+      btn.style.display = '';
     });
   };
 
