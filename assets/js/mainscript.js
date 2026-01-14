@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Smooth scroll on page load if URL contains a hash (pl. index.html#about)
-    setTimeout(function () {
+    // Próbáljuk meg többször is, ha elsőre nem található a hash elem (mobilon lassabb lehet)
+    function smoothScrollToHash(retries = 3, delay = 300) {
         if (window.location.hash && window.location.hash.length > 1) {
             const targetId = window.location.hash;
             let targetElement = document.querySelector(targetId);
@@ -97,9 +98,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     top: topPosition,
                     behavior: "smooth"
                 });
+            } else if (retries > 0) {
+                setTimeout(function () {
+                    smoothScrollToHash(retries - 1, delay);
+                }, delay);
             }
         }
-    }, 100);
+    }
+    setTimeout(function () { smoothScrollToHash(3, 300); }, 300);
 
     // A képváltó slider JavaScriptje (ha van ilyen a index.html-ben)
     const sliderImages = document.querySelectorAll('.slider-image');
