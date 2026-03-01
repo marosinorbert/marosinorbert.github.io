@@ -11,7 +11,7 @@ window.translations = {
     "nav.contact": "Kapcsolat",
 
     "hero.title": "Ecozone Technologies",
-    "hero.subtitle": "Belterek vegyszermentes kezelése, allergének, szagok és élősködők csökkentése <span class=\"ecozone-tech\"><span class=\"eco1\">Eco</span><span class=\"zone1\">zone</span>-<span class=\"tech1\">tech</span></span> eljárással",
+    "hero.subtitle": "Belterek vegyszermentes kezelése, allergének, szagok és élősködők csökkentése <span class=\"ecozone-tech\"><span class=\"eco1\">Eco</span><span class=\"zone2\">zone</span>-<span class=\"tech1\">tech</span></span> eljárással",
     "hero.description": "Szolgáltatásunk célja a beltéri környezet minőségének javítása és a kellemetlen tényezők mérséklése.",
     "auto.title": "Ózonos autóklíma-fertőtlenítés és utastér szagtalanítás",
     "penesz.title": "Penészgombák és Allergének",
