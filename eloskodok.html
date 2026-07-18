@@ -2,23 +2,24 @@
 <html lang="hu">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Élősködők és Allergének</title>
   <link rel="icon" type="image/png" href="assets/images/main/favicon.png">
   <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/css/styles-eloskodok.css" />
+  <link rel="stylesheet" href="assets/css/styles-eloskodok.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body>
+<body data-title-key="eloskodok.title">
   <header>
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
           <img src="assets/images/logo.png" alt="Ecozone Technologies Logo"
-            onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo'" />
+            onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo'">
         </a>
-        <nav>
+        <nav aria-label="Fő navigáció" data-key-aria-label="nav.main_menu">
           <ul class="nav-links">
             <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
@@ -33,17 +34,17 @@
             <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
             <li class="lang-switch-nav">
               <div class="lang-switch">
-                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+                <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
               </div>
             </li>
           </ul>
         </nav>
         <div class="lang-switch mobile-lang-switch">
-          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-          <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+          <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+          <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása" aria-controls="mobileNav" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -52,7 +53,7 @@
     </div>
   </header>
 
-  <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció" data-key-aria-label="nav.mobile_menu">
     <ul>
       <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
       <li class="dropdown">
@@ -67,12 +68,12 @@
       <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
       <li class="lang-switch-nav">
         <div class="lang-switch">
-          <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
-          <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+          <button type="button" data-lang="hu" title="Magyar">🇭🇺</button>
+          <button type="button" data-lang="ro" title="Română">🇷🇴</button>
         </div>
       </li>
     </ul>
-  </div>
+  </nav>
 
   <main>
     <section id="home" class="hero">
@@ -96,8 +97,8 @@
                 <p data-key="eloskodok.section1.p">A poratkák mikroszkopikus méretű élőlények, melyek leginkább meleg, párás környezetben élnek. Bár maguk az atkák nem károsak, az általuk kibocsátott allergének súlyos allergiás reakciókat válthatnak ki. A pókok és más rovarok, mint a bolhák és csótányok, szintén megtelepedhetnek a bútorokban és a falak repedéseiben.</p>
             </div>
             <div class="image-content-column">
-              <img src="eloskodok/poratka_pok.jpg" alt="Poratka és pók" class="content-image"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=PoratkaPok';" />
+              <img src="assets/images/eloskodok/poratka_pok.jpg" alt="Poratka és pók" class="content-image"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=PoratkaPok';">
             </div>
           </div>
 
@@ -107,8 +108,8 @@
               <p data-key="eloskodok.section2.p">Az ózon gáz halmazállapotú és a levegőnél nehezebb, így bejut minden apró résbe, a szövetek és kárpitok mélyére, valamint a matracok belsejébe. Rövid idő alatt elpusztítja a poratkákat, pókokat és más élősködőket, roncsolva légzőszervüket. Az eljárás vegyszermentes és veszélytelen az emberre.</p>
             </div>
             <div class="image-content-column">
-              <img src="eloskodok/tisztitott_otthon.jpg" alt="Tiszta otthon" class="content-image"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=TisztitottOtthon';" />
+              <img src="assets/images/eloskodok/tisztitott_otthon.jpg" alt="Tiszta otthon" class="content-image"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=TisztitottOtthon';">
             </div>
           </div>
           <div class="feature-card-peneszgombak-with-image">
@@ -117,8 +118,8 @@
               <p data-key="eloskodok.section3.p">Az ózon egyedülálló módon oxidálja az atkák ürülékét is, amely a porallergia tüneteinek fő okozója. A hagyományos takarítás gyakran nem képes teljesen semlegesíteni ezeket az allergéneket. Az ózonos kezelés után a hálószoba és az ágynemű higiénikus és friss illatú lesz.</p>
             </div>
             <div class="image-content-column">
-              <img src="eloskodok/higienikus_kornyezet.jpg" alt="Higiénikus környezet" class="content-image"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=HigienikusKornyezet';" />
+              <img src="assets/images/eloskodok/higienikus_kornyezet.jpg" alt="Higiénikus környezet" class="content-image"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=HigienikusKornyezet';">
             </div>
           </div>
 
@@ -143,8 +144,8 @@
       <div class="footer-content">
           <h3 data-key="footer.company">Ecozone Technologies</h3>
           <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
-        <p style="text-align: center; font-size: 0.9em; color: #555;"><a href="https://www.facebook.com/mrsnrbrt"
-            style="color: #7a7a7a; text-decoration: none;" target="_blank" rel="noopener noreferrer">made by
+        <p class="site-credit"><a href="https://www.facebook.com/mrsnrbrt"
+            class="site-credit-link" target="_blank" rel="noopener noreferrer">made by
             mrsnrbrt</a></p>
       </div>
     </div>

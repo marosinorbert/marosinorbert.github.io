@@ -1,0 +1,452 @@
+/* Közös reszponzív felülírások – minden oldal ezt tölti be utoljára. */
+:root {
+  --page-gutter: clamp(0.75rem, 3vw, 2rem);
+  --header-height: 80px;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  padding-top: var(--header-height);
+}
+
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.container {
+  width: min(calc(100% - (2 * var(--page-gutter))), 1200px);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+header .container {
+  width: min(calc(100% - (2 * var(--page-gutter))), 1440px);
+  max-width: 1440px;
+}
+
+.header-content {
+  gap: clamp(0.75rem, 2vw, 2rem);
+  min-width: 0;
+}
+
+.logo {
+  flex: 0 1 320px;
+  min-width: 0;
+}
+
+.logo img {
+  width: clamp(180px, 23vw, 320px);
+  max-height: 76px;
+  object-fit: contain;
+}
+
+header nav {
+  min-width: 0;
+  margin-left: auto;
+}
+
+.nav-links {
+  align-items: center;
+  gap: clamp(0.25rem, 1.6vw, 1.75rem);
+  font-size: clamp(0.94rem, 1.15vw, 1.08rem);
+}
+
+.nav-links a {
+  padding: 0.55rem 0.65rem;
+  white-space: nowrap;
+}
+
+.lang-flag {
+  display: block;
+  width: auto;
+  height: 1.5rem;
+}
+
+.mobile-nav {
+  top: calc(var(--header-height) + 0.5rem);
+  right: var(--page-gutter);
+  left: auto;
+  width: min(360px, calc(100vw - (2 * var(--page-gutter))));
+  max-height: calc(100dvh - var(--header-height) - 1.5rem);
+}
+
+.hero {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+}
+
+.hero h1,
+.hero .hero-content h1 {
+  max-width: 100%;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  max-width: 960px;
+  margin-inline: auto;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  line-height: 1.55;
+}
+
+.section-title,
+.section-title-allergens,
+.cta h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.features-grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.features-grid,
+.features-grid-auto,
+.features-grid-autos,
+.features-grid-bakteriumok,
+.features-grid-egeszsegugyi,
+.features-grid-gabona,
+.features-grid-klima,
+.features-grid-vendeglatas,
+.features-grid-peneszgombak,
+.features-grid-allergens,
+.contact-details-grid {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 0;
+}
+
+.feature-card,
+.feature-card-auto,
+.feature-card-bakteriumok,
+.feature-card-egeszsegugyi,
+.feature-card-gabona,
+.feature-card-klima,
+.feature-card-vendeglatas,
+.feature-card-peneszgombak,
+.feature-card-allergens,
+.contact-card,
+.contact-form-wrapper,
+.image-content-column,
+.text-content-column {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.feature-card > a {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-card > a:focus-visible,
+.cta-button:focus-visible,
+.submit-button:focus-visible,
+.nav-links a:focus-visible,
+.mobile-nav a:focus-visible,
+.lang-switch button:focus-visible,
+.mobile-menu-btn:focus-visible {
+  outline: 3px solid #005f8f;
+  outline-offset: 3px;
+}
+
+.content-image,
+.process-image {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+}
+
+.feature-card-bakteriumok-with-image,
+.feature-card-egeszsegugyi-with-image,
+.feature-card-gabona-with-image,
+.feature-card-klima-with-image,
+.feature-card-vendeglatas-with-image,
+.feature-card-peneszgombak-with-image {
+  min-width: 0;
+}
+
+.feature-card p,
+.feature-card-auto p,
+.feature-card-bakteriumok p,
+.feature-card-egeszsegugyi p,
+.feature-card-gabona p,
+.feature-card-klima p,
+.feature-card-vendeglatas p,
+.feature-card-peneszgombak p,
+.feature-card-allergens li,
+.highlight-tips-box li,
+.section-description,
+.about-text {
+  hyphens: auto;
+}
+
+.contact-form,
+.contact-form-wrapper .contact-form {
+  width: 100%;
+  max-width: 700px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+}
+
+.contact-card a,
+.call-to-action-small a {
+  overflow-wrap: anywhere;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.cta-subtitle {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.site-credit {
+  color: #aaa;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-credit-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.site-credit-link:hover,
+.site-credit-link:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.particles .particle:nth-child(1) { left: 10%; top: 20%; width: 10px; height: 10px; animation-delay: 0s; }
+.particles .particle:nth-child(2) { left: 20%; top: 80%; width: 15px; height: 15px; animation-delay: 1s; }
+.particles .particle:nth-child(3) { left: 80%; top: 40%; width: 8px; height: 8px; animation-delay: 2s; }
+.particles .particle:nth-child(4) { left: 90%; top: 10%; width: 12px; height: 12px; animation-delay: 3s; }
+.particles .particle:nth-child(5) { left: 5%; top: 50%; width: 14px; height: 14px; animation-delay: 0.5s; }
+.particles .particle:nth-child(6) { left: 30%; top: 15%; width: 9px; height: 9px; animation-delay: 2.5s; }
+.particles .particle:nth-child(7) { left: 70%; top: 90%; width: 11px; height: 11px; animation-delay: 1.5s; }
+.particles .particle:nth-child(8) { left: 45%; top: 30%; width: 16px; height: 16px; animation-delay: 4s; }
+.particles .particle:nth-child(9) { left: 55%; top: 70%; width: 7px; height: 7px; animation-delay: 0s; }
+.particles .particle:nth-child(10) { left: 15%; top: 5%; width: 13px; height: 13px; animation-delay: 3.5s; }
+.particles .particle:nth-child(11) { left: 65%; top: 60%; width: 10px; height: 10px; animation-delay: 1s; }
+.particles .particle:nth-child(12) { left: 25%; top: 45%; width: 18px; height: 18px; animation-delay: 2s; }
+.particles .particle:nth-child(13) { left: 85%; top: 75%; width: 9px; height: 9px; animation-delay: 0.8s; }
+.particles .particle:nth-child(14) { left: 40%; top: 5%; width: 12px; height: 12px; animation-delay: 1.2s; }
+.particles .particle:nth-child(15) { left: 75%; top: 25%; width: 15px; height: 15px; animation-delay: 2.8s; }
+.particles .particle:nth-child(16) { left: 50%; top: 95%; width: 10px; height: 10px; animation-delay: 0.3s; }
+
+.slider-wrapper,
+.image-slider-container {
+  min-height: clamp(220px, 52vw, 500px);
+}
+
+.slider-image,
+.slider-image.active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  header nav .nav-links {
+    display: none;
+  }
+
+  header nav .lang-switch-nav,
+  .mobile-nav .lang-switch-nav {
+    display: none;
+  }
+
+  .mobile-lang-switch,
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    flex: 0 0 auto;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 900px) {
+  .feature-card-bakteriumok-with-image,
+  .feature-card-egeszsegugyi-with-image,
+  .feature-card-gabona-with-image,
+  .feature-card-klima-with-image,
+  .feature-card-vendeglatas-with-image,
+  .feature-card-peneszgombak-with-image,
+  .reversed-layout {
+    flex-direction: column;
+  }
+
+  .image-content-column,
+  .text-content-column {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 0.75rem;
+  }
+
+  .header-content {
+    padding-block: 0.65rem;
+  }
+
+  .logo {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+
+  .logo img {
+    width: clamp(150px, 52vw, 210px);
+    max-height: 58px;
+  }
+
+  .lang-switch {
+    gap: 0.15rem;
+  }
+
+  .lang-switch button {
+    padding: 0.35rem;
+  }
+
+  .mobile-nav {
+    right: var(--page-gutter);
+    left: var(--page-gutter);
+    width: auto;
+  }
+
+  .hero {
+    padding: 3.25rem 0;
+  }
+
+  .content-section,
+  .services,
+  .about,
+  .cta {
+    padding-block: 2.5rem;
+  }
+
+  .features-grid,
+  .features-grid-auto,
+  .features-grid-autos,
+  .features-grid-bakteriumok,
+  .features-grid-egeszsegugyi,
+  .features-grid-gabona,
+  .features-grid-klima,
+  .features-grid-vendeglatas,
+  .features-grid-peneszgombak,
+  .features-grid-allergens,
+  .contact-details-grid {
+    gap: 1.25rem;
+    margin-block: 1.5rem;
+  }
+
+  .feature-card,
+  .feature-card-auto,
+  .feature-card-bakteriumok,
+  .feature-card-egeszsegugyi,
+  .feature-card-gabona,
+  .feature-card-klima,
+  .feature-card-vendeglatas,
+  .feature-card-peneszgombak,
+  .feature-card-allergens,
+  .contact-card,
+  .highlight-tips-box,
+  .call-to-action-small {
+    min-height: 0;
+    padding: 1.25rem;
+  }
+
+  .feature-card p,
+  .feature-card-auto p,
+  .feature-card-bakteriumok p,
+  .feature-card-egeszsegugyi p,
+  .feature-card-gabona p,
+  .feature-card-klima p,
+  .feature-card-vendeglatas p,
+  .feature-card-peneszgombak p,
+  .feature-card-allergens li,
+  .highlight-tips-box li,
+  .section-description,
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  .benefits-icons img {
+    width: min(125px, 38vw);
+    height: auto;
+  }
+
+  .services-image-container {
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    width: min(100%, 300px);
+  }
+
+  .submit-button,
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

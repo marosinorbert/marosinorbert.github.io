@@ -8,9 +8,10 @@
     <link rel="icon" type="image/png" href="assets/images/main/favicon.png">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/styles-main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body>
+<body data-title-key="hero.title">
     <header>
         <div class="container">
             <div class="header-content">
@@ -20,7 +21,7 @@
                         onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo';">
                 </a>
 
-                <nav>
+                <nav aria-label="Fő navigáció" data-key-aria-label="nav.main_menu">
                     <ul class="nav-links">
                         <li><a href="#home" data-key="nav.home">Főoldal</a></li>
                         <li class="dropdown">
@@ -37,17 +38,17 @@
                         <li><a href="#contact" data-key="nav.contact">Kapcsolat</a></li>
                         <li class="lang-switch-nav">
                             <div class="lang-switch" aria-hidden="false">
-                                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-                                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                                <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+                                <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
                             </div>
                         </li>
                     </ul>
                 </nav>
                 <div class="lang-switch mobile-lang-switch" aria-hidden="false">
-                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                    <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+                    <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása" aria-controls="mobileNav" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,7 +58,7 @@
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció" data-key-aria-label="nav.mobile_menu">
         <ul>
             <li><a href="#home" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
@@ -72,47 +73,32 @@
             <li><a href="#contact" data-key="nav.contact">Kapcsolat</a></li>
             <li class="lang-switch-nav">
                 <div class="lang-switch" aria-hidden="false">
-                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
-                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+                    <button type="button" data-lang="hu" title="Magyar">🇭🇺</button>
+                    <button type="button" data-lang="ro" title="Română">🇷🇴</button>
                 </div>
             </li>
         </ul>
-    </div>
+    </nav>
 
     <main>
         <section id="home" class="hero">
             <div class="particles">
-                <div class="particle" style="left: 10%; top: 20%; width: 10px; height: 10px; animation-delay: 0s;">
-                </div>
-                <div class="particle" style="left: 20%; top: 80%; width: 15px; height: 15px; animation-delay: 1s;">
-                </div>
-                <div class="particle" style="left: 80%; top: 40%; width: 8px; height: 8px; animation-delay: 2s;"></div>
-                <div class="particle" style="left: 90%; top: 10%; width: 12px; height: 12px; animation-delay: 3s;">
-                </div>
-
-                <div class="particle" style="left: 5%; top: 50%; width: 14px; height: 14px; animation-delay: 0.5s;">
-                </div>
-                <div class="particle" style="left: 30%; top: 15%; width: 9px; height: 9px; animation-delay: 2.5s;">
-                </div>
-                <div class="particle" style="left: 70%; top: 90%; width: 11px; height: 11px; animation-delay: 1.5s;">
-                </div>
-                <div class="particle" style="left: 45%; top: 30%; width: 16px; height: 16px; animation-delay: 4s;">
-                </div>
-                <div class="particle" style="left: 55%; top: 70%; width: 7px; height: 7px; animation-delay: 0s;"></div>
-                <div class="particle" style="left: 15%; top: 5%; width: 13px; height: 13px; animation-delay: 3.5s;">
-                </div>
-                <div class="particle" style="left: 65%; top: 60%; width: 10px; height: 10px; animation-delay: 1s;">
-                </div>
-                <div class="particle" style="left: 25%; top: 45%; width: 18px; height: 18px; animation-delay: 2s;">
-                </div>
-                <div class="particle" style="left: 85%; top: 75%; width: 9px; height: 9px; animation-delay: 0.8s;">
-                </div>
-                <div class="particle" style="left: 40%; top: 5%; width: 12px; height: 12px; animation-delay: 1.2s;">
-                </div>
-                <div class="particle" style="left: 75%; top: 25%; width: 15px; height: 15px; animation-delay: 2.8s;">
-                </div>
-                <div class="particle" style="left: 50%; top: 95%; width: 10px; height: 10px; animation-delay: 0.3s;">
-                </div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
             </div>
             <div class="container">
                     <div class="hero-content">
@@ -270,7 +256,7 @@
         <section class="cta">
             <div class="container">
                 <h2 data-key="cta.title">Készen áll a tiszta, egészséges környezetre?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;" data-key="cta.subtitle">Lépjen kapcsolatba velünk!</p>
+                <p class="cta-subtitle" data-key="cta.subtitle">Lépjen kapcsolatba velünk!</p>
                 <a href="kapcsolat.html" class="cta-button" data-key="cta.button">Kapcsolatfelvétel</a>
             </div>
         </section>
@@ -281,8 +267,8 @@
                 <div class="footer-content">
                 <h3 data-key="footer.company">Ecozone Technologies</h3>
                 <p data-key="footer.copyright">© 2026 Ecozone Technologies - Minden jog fenntartva</p>
-                <p style="text-align: center; font-size: 0.9em; color: #555;"><a
-                        href="https://www.facebook.com/mrsnrbrt" style="color: #7a7a7a; text-decoration: none;"
+                <p class="site-credit"><a
+                        href="https://www.facebook.com/mrsnrbrt" class="site-credit-link"
                         target="_blank" rel="noopener noreferrer">made by mrsnrbrt</a></p>
             </div>
         </div>

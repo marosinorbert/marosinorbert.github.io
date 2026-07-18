@@ -2,23 +2,24 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rossz szagok</title>
     <link rel="icon" type="image/png" href="assets/images/main/favicon.png">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/styles-rosszSzagok.css" />
+    <link rel="stylesheet" href="assets/css/styles-rosszSzagok.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body>
+<body data-title-key="rosszSzagok.title">
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
                     <img src="assets/images/logo.png" alt="Ecozone Technologies Logo"
-                        onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo'" />
+                        onerror="this.onerror=null;this.src='https://placehold.co/150x60/c8e6c8/333333?text=Logo'">
                 </a>
-                <nav>
+                <nav aria-label="Fő navigáció" data-key-aria-label="nav.main_menu">
                     <ul class="nav-links">
                         <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
                         <li class="dropdown">
@@ -33,17 +34,17 @@
                         <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
                         <li class="lang-switch-nav">
                             <div class="lang-switch">
-                                <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-                                <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                                <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+                                <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
                             </div>
                         </li>
                     </ul>
                 </nav>
                 <div class="lang-switch mobile-lang-switch">
-                    <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" style="height: 1.5rem; width: auto;"></button>
-                    <button data-lang="ro" onclick="setLanguage('ro')" title="Română"><img src="assets/images/RO.png" alt="Română" style="height: 1.5rem; width: auto;"></button>
+                    <button type="button" data-lang="hu" title="Magyar"><img src="assets/images/HU.png" alt="Magyar" class="lang-flag"></button>
+                    <button type="button" data-lang="ro" title="Română"><img src="assets/images/RO.png" alt="Română" class="lang-flag"></button>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása">
+                <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü megnyitása" aria-controls="mobileNav" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -52,7 +53,7 @@
         </div>
     </header>
 
-    <div class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció">
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobil navigáció" data-key-aria-label="nav.mobile_menu">
         <ul>
             <li><a href="index.html" data-key="nav.home">Főoldal</a></li>
             <li class="dropdown">
@@ -67,10 +68,12 @@
             <li><a href="kapcsolat.html" data-key="nav.contact">Kapcsolat</a></li>
         <li class="lang-switch-nav">
           <div class="lang-switch">
-            <button data-lang="hu" onclick="setLanguage('hu')" title="Magyar">🇭🇺</button>
-            <button data-lang="ro" onclick="setLanguage('ro')" title="Română">🇷🇴</button>
+            <button type="button" data-lang="hu" title="Magyar">🇭🇺</button>
+            <button type="button" data-lang="ro" title="Română">🇷🇴</button>
           </div>
         </li>
+        </ul>
+    </nav>
 
     <main>
         <section id="home" class="hero">
@@ -102,7 +105,7 @@
                         </div>
                         <div class="image-content-column">
                             <img src="assets/images/rosszSzagok/szagtalanitas1.jpg" alt="Ózonos szagtalanítás" class="content-image"
-                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas1';" />
+                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas1';">
                         </div>
                     </div>
 
@@ -119,7 +122,7 @@
                         <div class="image-content-column">
                             <img src="assets/images/rosszSzagok/szagtalanitas2.jpg" alt="Dohányfüst eltávolítása"
                                 class="content-image"
-                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas2';" />
+                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas2';">
                         </div>
                     </div>
                     <div class="feature-card-peneszgombak-with-image">
@@ -134,7 +137,7 @@
                         </div>
                         <div class="image-content-column">
                             <img src="assets/images/rosszSzagok/szagtalanitas3.jpg" alt="Kisállat szagok" class="content-image"
-                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas3';" />
+                                onerror="this.onerror=null;this.src='https://placehold.co/400x300/e8f5e8/333333?text=Szagtalanitas3';">
                         </div>
                     </div>
 
@@ -145,13 +148,11 @@
                             </div>
                         <ul>
                             <li data-key="rosszSzagok.tips.li1">Ha festéssel szeretné eltüntetni a kellemetlen szagokat, a szagtalanítást mindig a festés előtt ajánlott elvégezni.</li>
-                            <li data-key="rosszSzagok.tips.li2">Ha tervezi a kellemetlen szagú szőnyeg, bútorkárpit vagy más nagyobb lakástextília nedves kitisztítását is, akkor 
+                            <li data-key="rosszSzagok.tips.li2">Ha tervezi a kellemetlen szagú szőnyeg, bútorkárpit vagy más nagyobb lakástextília nedves kitisztítását is, akkor
                                 még előtte ajánlatos a szagtalanító eljárást elvégezni.</li>
                         </ul>
                     </div>
                 </div>
-
-            </div>
             </div>
         </section>
     </main>
@@ -161,8 +162,8 @@
             <div class="footer-content">
                 <h3 data-key="footer.company">Ecozone Technologies</h3>
                 <p data-key="footer.copyright"> © 2026 Ecozone Technologies - Minden jog fenntartva</p>
-                <p style="text-align: center; font-size: 0.9em; color: #555;"><a
-                        href="https://www.facebook.com/mrsnrbrt" style="color: #7a7a7a; text-decoration: none;"
+                <p class="site-credit"><a
+                        href="https://www.facebook.com/mrsnrbrt" class="site-credit-link"
                         target="_blank" rel="noopener noreferrer">made by
                         mrsnrbrt</a></p>
             </div>
